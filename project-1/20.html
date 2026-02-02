@@ -8,29 +8,23 @@
     <style>
     body {
         background-color: #ffffff;
-        letter-spacing: .2px;
-        font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
-        font-size: 15px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 20px;
     }
+
     p {
         line-height: 1.5; 
-        text-align: left;
     }
+
     h1 {
         font-weight: bold;
         font-size: 60px;
-        color: rgb(0, 59, 107);
+        color: rgb(34, 38, 148);
         font-family: 'Gill Sans', Calibri, sans-serif;
-        text-align: center;
-        letter-spacing: .1px;
-    }
-    h2 {
-        font-size: 30px;
-        font-weight: bold;
-        color: rgb(182, 30, 30);
-        font-family: 'Gill Sans', Calibri, sans-serif;
+        margin-bottom: 0px;
         text-align: center;
     }
+
     h3 {
         font-size: 30px;
         font-weight: bold;
@@ -40,175 +34,230 @@
         letter-spacing: 1.5px;
         padding: .4em;
         font-family: 'Gill Sans', Calibri, sans-serif;
-        margin-bottom: 8px;
-        margin-bottom: 25px;;
+        transition: font-size .4s;
+    }
+
+    h3:hover {
+        font-size: 36px;
     }
     h4 {
         text-align: center;
-        background-color: rgb(247, 190, 190);
-        padding: .3em;
-        margin-top: 0;
+        margin-bottom: 20px;
+        background-color: rgb(249, 156, 156);
+        padding: 12px;
+        font-weight: bold;
     }
     a {
         color: rgb(6, 33, 130);
     }
+
+    b {
+        font-weight: bold;
+    }
+  
     img {
         display: block;
         margin: auto;
         width: 320px;
         padding-top: 20px;
     }
+    summary {
+        cursor: pointer;
+        list-style: none;
+    }
+    details {
+        margin-bottom: 15px;
+    }
 
-    .section-box {
+    .box {
         background-color: #fdeaea;
-        border: 2px solid rgb(182, 30, 30);
-        border-radius: 16px;
+        border: 2px solid rgb(165, 0, 0);  
+        border-radius: 8px;
         padding: 20px;
         margin-bottom: 25px;
+        margin-top: 25px;;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-wrap: wrap;
+    }
+    .item {
+        flex: 0 0 49%;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        padding: 10px;
+
+        background-color: #fdeaea;        
+        border: 2px solid rgb(165, 0, 0);  
+        border-radius: 8px;
+    }
+
+    .location  {
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .hours  {
+        text-align: center;
+        font-size: 22px;
     }
     </style>
 </head>
 
 <body>
 
+<img src="seoultaco.png" alt="Seoul Taco">
 
-<h1><b>SEOUL TACO</b></h1>
+<details open>
+    <summary><h3 >Location </h3></summary>
 
-<h3>Location</h3>
-<div class="section-box">
+    <div class="location">
     <p>6665 Delmar Blvd, St. Louis, MO 63130</p>
-    <a href="https://www.google.com/maps">View on Map</a>
-</div>
 
-<h3>Hours</h3>
-<div class="section-box">
+    <a href="https://www.google.com/maps?s=web&lqi=ChJzZW91bCB0YWNvIGFkZHJlc3MiAkgBSJ2Pg4jdgYCACFoUEAAQARgAGAEiCnNlb3VsIHRhY2-SARdhc2lhbl9mdXNpb25fcmVzdGF1cmFudOABAA&vet=12ahUKEwjxuoGi352SAxWi8bsIHXbfOFAQ1YkKegQIHBAB..i&cs=0&um=1&ie=UTF-8&fb=1&gl=us&sa=X&geocode=KRmVhZhTNd-HMQ7EuBTzU8u8&daddr=6665+Delmar+Blvd,+University+City,+MO+63130">
+         View on Map
+    </a>
+    </div>
+</details>
+
+<details open>
+    <summary><h3>Hours</h3></summary>
+    <div class="hours">
     <p>Monday – Sunday<br>11 am – 10 pm</p>
-</div>
+    </div>
+</details>
 
-<h3>Entrees</h3>
-<div class="section-box">
-    <h4><em>Each With Your Choice of Bulgogi Steak, Chicken, Spicy Pork, or Tofu</em></h4>
 
-    <p>
-                <b>Seoul Taco</b> – $9.99, <em>+$1 Steak</em>
-                <ul>
-                    <li>3 tacos with protein, sesame vinaigrette salad mix, green onion, crushed sesame seeds, Seoul sauce, lime</li>
-                </ul>
+<details>
+<summary><h3>Entrees</h3></summary>
+<h4><em>Each With Your Choice of Bulgogi Steak, Chicken, Spicy Pork, or Tofu</em></h4>
 
-            
-                <b>Street Taco</b> – $9.99, <em>+$1 Steak</em>
-                <ul>
-                    <li>3 tacos with protein, white onion, cilantro, salsa verde</li>
-                </ul>
-            
-
-            
-                <b>Burrito</b> – $12.99, <em>+$2.50 Steak</em>
-                <ul>
-                    <li>Kimchi fried rice, lettuce, cheese, carrots, green onions, sour cream, Seoul sauce, wasabi sauce</li>
-                </ul>
-            
-
-            
-                <b>Quesadilla</b> – $9.99, <em>+$2 Steak</em>
-                <ul>
-                    <li>Jack & cheddar cheese, lettuce, Seoul sauce, wasabi sauce, sour cream</li>
-                </ul>
-            
-
-            
-                <b>Corn Elote Quesadilla</b> – $8.99, <em>+$2 Protein</em>, <em>+$3 Steak</em>
-                <ul>
-                    <li>Roasted corn salad, mozzarella, Seoul sauce, green onions, tajin, cotija</li>
-                </ul>
-            
-
-            
-                <b>Gogi Bowl</b> – $12.99, <em>+$2 Steak</em>, <em>+$1 Fried Rice</em>
-                <ul>
-                    <li>Sesame vinaigrette salad mix, fried egg, rice, carrots, green onion, sesame oil, gochujang</li>
-                </ul>
-            
-
-            
-                <b>Nachos</b> – $12.99, <em>+$2 Steak</em>
-                <ul>
-                    <li>Corn tortilla chips, queso blanco, green onion, sesame seeds, kimchi, sour cream</li>
-                </ul>
-            </p>     
-</div>
-
-<h3>Sides</h3>
-<div class="section-box">
-    <b>Taco</b> – $4, <em>+$1 Steak</em>
-                <ul>
-                    <li>Choice of Seoul Taco or Street Taco</li>
-                </ul>
-            
-
-            
-                <b>OG Kimchi</b> – $4
-                <ul>
-                    <li>Traditional spicy & sour napa cabbage kimchi</li>
-                </ul>
-            
-
-            
-                <b>Kimchi Slaw</b> – $4
-                <ul>
-                    <li>Daikon radish slaw, vinegar-based with subtle heat</li>
-                </ul>
-            
-
-            
-                <b>Kimchi Fried Rice</b> – $4
-                <ul>
-                    <li>Mixed with kimchi slaw, topped with OG kimchi, green onion, sesame seeds</li>
-                </ul>
+<div class="container">
+  <div class="item">
+                <b>Seoul Taco</b> – $9.99, <em>+$1 Steak</em> <br><br>
           
+             3 tacos with protein, sesame vinaigrette salad mix, green onion, crushed sesame seeds, Seoul sauce, lime
+             
+    </div>
 
-      
-                <b>Chips & Queso</b> – $7
-                <ul>
-                    <li>Corn chips, queso blanco, green onions, Korean pepper flakes</li>
-                </ul>
-     
+            <div class="item">
+                <b>Street Taco</b> – $9.99, <em>+$1 Steak</em> <br><br>
+                3 tacos with protein, white onion, cilantro, salsa verde
+            </div>
 
+            <div class="item">
+                <b>Burrito</b> – $12.99, <em>+$2.50 Steak</em> <br><br>
+                    Kimchi fried rice, lettuce, cheese, carrots, green onions, sour cream, Seoul sauce, wasabi sauce
+            </div>
 
-                <b>Chips & Salsa</b> – $5
-                <ul>
-                    <li>Corn tortilla chips with salsa verde</li>
-                </ul>
-      
-   
-                <b>Korean Cheesy Elote Bites</b> – 6 for $8
-                <ul>
-                    <li>Potato & corn croquettes with Seoul sauce, tajin, cotija, green onion</li>
-                </ul>
+            <div class="item">
+                <b>Quesadilla</b> – $9.99, <em>+$2 Steak</em> <br><br>
+                    Jack & cheddar cheese, lettuce, Seoul sauce, wasabi sauce, sour cream
+            </div>
+
+            <div class="item">
+                <b>Corn Elote Quesadilla</b> – $8.99, <em>+$2 Protein</em>, <em>+$3 Steak</em> <br><br>
+                    Roasted corn salad, mozzarella, Seoul sauce, green onions, tajin, cotija
+            </div>
+
+            <div class="item">
+                <b>Gogi Bowl</b> – $12.99, <em>+$2 Steak</em>, <em>+$1 Fried Rice</em><br><br>
+                    Sesame vinaigrette salad mix, fried egg, rice, carrots, green onion, sesame oil, gochujang
+                
+            </div>
+
+            <div class="item">
+                <b>Nachos</b> – $12.99, <em>+$2 Steak</em> <br><br>
+                    Corn tortilla chips, queso blanco, green onion, sesame seeds, kimchi, sour cream
+            </div>
+</div>
+
+</details>
+    
+    <details>
+        <summary><h3>Sides</h3></summary>
+
+        <div class="container">
+
+            <div class="item">
+                <b>Taco</b> – $4, <em>+$1 Steak</em><br><br>
+                    Choice of Seoul Taco or Street Taco
+            </div>
+
+            <div class="item">
+                <b>OG Kimchi</b> – $4 <br><br>
+                     Traditional spicy & sour napa cabbage kimchi
+                
+            </div>
+
+            <div class="item">
+                <b>Kimchi Slaw</b> – $4 <br><br>
+                    Daikon radish slaw, vinegar-based with subtle heat
+            </div>
+
+            <div class="item">
+                <b>Kimchi Fried Rice</b> – $4<br><br>
+                Mixed with kimchi slaw, topped with OG kimchi, green onion, sesame seeds
+            </div>
+
+                <div class="item">
+                <b>Chips & Queso</b> – $7<br><br>
             
+                Corn chips, queso blanco, green onions, Korean pepper flakes
+                
+          </div>
 
-      
-                <b>Wagyu Truffle Mandu</b> – 6 for $10
-                <ul>
-                    <li>Fried dumplings with chili crisp, white onion, cilantro, truffle soy sauce, red pepper flakes</li>
-                </ul>
-     
-</div>
+                <div class="item">
+                <b>Chips & Salsa</b> – $5<br><br>
+                
+                Corn tortilla chips with salsa verde
+                
+      </div>
+                <div class="item">
+                <b>Korean Cheesy Elote Bites</b> – 6 for $8<br><br>
+                
+                Potato & corn croquettes with Seoul sauce, tajin, cotija, green onion
+                
+            </div>
 
-<h3>Desserts</h3>
-<div class="section-box">
-    <strong>Miso Salted Caramel Cookie</strong> – $3.49<br>
-    <strong>Matcha Chocolate Chip Cookie</strong> – $3.49<br>
-    <strong>Churros</strong> – 3 for $7
+                <div class="item">
+                <b>Wagyu Truffle Mandu</b> – 6 for $10<br><br>
+                
+                Fried dumplings with chili crisp, white onion, cilantro, truffle soy sauce, red pepper flakes</li>
+    
+            </div>
 </div>
+    </details>
 
-<h3>Drinks</h3>
-<div class="section-box">
-    Bottled Water – $2.50<br>
-    Fountain Soda – $3<br>
-    Bottled Soda – $3.50<br>
-    Agua Fresca – $3
-</div>
+    <details>
+        <summary><h3>Desserts</h3></summary>
+
+        <div class ="box">
+        <p>
+            <strong>Miso Salted Caramel Cookie</strong> – $3.49<br>
+            <strong>Matcha Chocolate Chip Cookie</strong> – $3.49<br>
+            <strong>Churros</strong> – 3 for $7
+        </p>
+        </div>
+    </details>
+
+    <details>
+        <summary><h3>Drinks</h3></summary>
+        <div class ="box">
+        <p>
+            <strong>Bottled Water </strong>– $2.50<br>
+            <strong>Fountain Soda </strong>– $3<br>
+            <strong>Bottled Soda </strong>– $3.50<br>
+            <strong>Agua Fresca </strong>– $3
+        </p>
+        </div>
+    </details>
+
+
 
 </body>
 </html>

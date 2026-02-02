@@ -14,7 +14,7 @@
     }
     p {
         line-height: 1.5; 
-        text-align: left;
+        font-weight: bold;
     }
     h1 {
         font-weight: bold;
@@ -24,13 +24,7 @@
         margin-bottom: 0px;
         text-align: center;
     }
-    h2 {
-        font-size: 30px;
-        font-weight: bold;
-        color: rgb(182, 30, 30);
-        font-family: 'Gill Sans', Calibri, sans-serif;
-        text-align: center;
-    }
+
     h3 {
         font-size: 30px;
         font-weight: bold;
@@ -44,8 +38,9 @@
     h4 {
         text-align: center;
         margin-bottom: 2px;
-        background-color: rgb(247, 190, 190);
+        background-color: rgb(249, 156, 156);
         padding: .3em;
+        font-style: bold;
     }
     a {
         color: rgb(6, 33, 130);
@@ -64,6 +59,21 @@
     details {
         margin-bottom: 15px;
     }
+
+    .box {
+        background-color: #fdeaea;
+        border: 2px solid rgb(182, 30, 30);
+        border-radius: 16px;
+        padding: 20px;
+        margin-bottom: 25px;
+        margin-top: 25px;;
+    }
+
+    .location  {
+        font-weight: normal;
+        font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+        text-align: center;
+    }
     </style>
 </head>
 
@@ -73,10 +83,14 @@
 
 <details open>
     <summary><h3 >Location</h3></summary>
+
+    <div class="Location">
     <p>6665 Delmar Blvd, St. Louis, MO 63130</p>
+
     <a href="https://www.google.com/maps?s=web&lqi=ChJzZW91bCB0YWNvIGFkZHJlc3MiAkgBSJ2Pg4jdgYCACFoUEAAQARgAGAEiCnNlb3VsIHRhY2-SARdhc2lhbl9mdXNpb25fcmVzdGF1cmFudOABAA&vet=12ahUKEwjxuoGi352SAxWi8bsIHXbfOFAQ1YkKegQIHBAB..i&cs=0&um=1&ie=UTF-8&fb=1&gl=us&sa=X&geocode=KRmVhZhTNd-HMQ7EuBTzU8u8&daddr=6665+Delmar+Blvd,+University+City,+MO+63130">
          View on Map
     </a>
+    </div>
 </details>
 
 <details open>
@@ -85,10 +99,11 @@
 </details>
 
 
+<details open>
+<summary><h3>Entrees</h3></summary>
+<h4><em>Each With Your Choice of Bulgogi Steak, Chicken, Spicy Pork, or Tofu</em></h4>
 
-    <details open>
-        <summary><h3>Entrees</h3></summary>
-        <h4><em>Each With Your Choice of Bulgogi Steak, Chicken, Spicy Pork, or Tofu</em></h4>
+    <div class ="box">
 
         <p>
                 <b>Seoul Taco</b> – $9.99, <em>+$1 Steak</em>
@@ -136,11 +151,14 @@
                 <ul>
                     <li>Corn tortilla chips, queso blanco, green onion, sesame seeds, kimchi, sour cream</li>
                 </ul>
-            </p>           
+            </p>  
+        </div>         
 </details>
     
     <details>
         <summary><h3>Sides</h3></summary>
+
+        <div class ="box">
 
         <b>Taco</b> – $4, <em>+$1 Steak</em>
                 <ul>
@@ -194,25 +212,31 @@
                 <ul>
                     <li>Fried dumplings with chili crisp, white onion, cilantro, truffle soy sauce, red pepper flakes</li>
                 </ul>
+        </div>
     </details>
 
     <details>
         <summary><h3>Desserts</h3></summary>
+
+        <div class ="box">
         <p>
             <strong>Miso Salted Caramel Cookie</strong> – $3.49<br>
             <strong>Matcha Chocolate Chip Cookie</strong> – $3.49<br>
             <strong>Churros</strong> – 3 for $7
         </p>
+        </div>
     </details>
 
     <details>
         <summary><h3>Drinks</h3></summary>
+        <div class ="box">
         <p>
             Bottled Water – $2.50<br>
             Fountain Soda – $3<br>
             Bottled Soda – $3.50<br>
             Agua Fresca – $3
         </p>
+        </div>
     </details>
 
 
