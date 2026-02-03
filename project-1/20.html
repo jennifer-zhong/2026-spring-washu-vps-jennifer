@@ -26,7 +26,7 @@
     }
 
     h3 {
-        font-size: 30px;
+        font-size: 26px;
         font-weight: bold;
         color: white;
         background-color: rgb(0, 59, 107);
@@ -34,11 +34,15 @@
         letter-spacing: 1.5px;
         padding: .4em;
         font-family: 'Gill Sans', Calibri, sans-serif;
-        transition: font-size .4s;
+        transition: .4s;
+        letter-spacing: .3px;
     }
 
     h3:hover {
-        font-size: 36px;
+        font-size: 32px;
+        background-color: rgb(5, 85, 151);
+        letter-spacing: 2px;
+
     }
     h4 {
         text-align: center;
@@ -49,10 +53,6 @@
     }
     a {
         color: rgb(6, 33, 130);
-    }
-
-    b {
-        font-weight: bold;
     }
   
     img {
@@ -105,6 +105,12 @@
         text-align: center;
         font-size: 22px;
     }
+
+    .photo {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
     </style>
 </head>
 
@@ -112,8 +118,12 @@
 
 <img src="seoultaco.png" alt="Seoul Taco">
 
+<div class="photo">
+<img src="seoul-taco-entrees.avif" alt="Seoul Taco Entrees">
+</div>
+
 <details open>
-    <summary><h3 >Location </h3></summary>
+    <summary><h3><b>Location</b> </h3></summary>
 
     <div class="location">
     <p>6665 Delmar Blvd, St. Louis, MO 63130</p>
@@ -125,7 +135,7 @@
 </details>
 
 <details open>
-    <summary><h3>Hours</h3></summary>
+    <summary><h3><b>Hours</b></h3></summary>
     <div class="hours">
     <p>Monday – Sunday<br>11 am – 10 pm</p>
     </div>
@@ -133,16 +143,15 @@
 
 
 <details>
-<summary><h3>Entrees</h3></summary>
+<summary><h3><b>Entrees</b></h3></summary>
 <h4><em>Each With Your Choice of Bulgogi Steak, Chicken, Spicy Pork, or Tofu</em></h4>
 
 <div class="container">
-  <div class="item">
-                <b>Seoul Taco</b> – $9.99, <em>+$1 Steak</em> <br><br>
-          
+
+            <div class="item">
+            <b>Seoul Taco</b> – $9.99, <em>+$1 Steak</em> <br><br>
              3 tacos with protein, sesame vinaigrette salad mix, green onion, crushed sesame seeds, Seoul sauce, lime
-             
-    </div>
+            </div>
 
             <div class="item">
                 <b>Street Taco</b> – $9.99, <em>+$1 Steak</em> <br><br>
@@ -179,7 +188,7 @@
 </details>
     
     <details>
-        <summary><h3>Sides</h3></summary>
+        <summary><h3><b>Sides</b></h3></summary>
 
         <div class="container">
 
@@ -234,7 +243,7 @@
     </details>
 
     <details>
-        <summary><h3>Desserts</h3></summary>
+        <summary><h3><b>Desserts</b></h3></summary>
 
         <div class ="box">
         <p>
@@ -246,7 +255,7 @@
     </details>
 
     <details>
-        <summary><h3>Drinks</h3></summary>
+        <summary><h3><b>Drinks</b></h3></summary>
         <div class ="box">
         <p>
             <strong>Bottled Water </strong>– $2.50<br>
