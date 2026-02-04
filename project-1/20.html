@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seoul Taco Menu</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta property="og:image" content="seoultaco.png">
+
     
     <style>
+    
     body {
         background-color: #ffffff;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -111,6 +115,19 @@
         margin-top: 20px;
         margin-bottom: 20px;
     }
+
+    @media screen and (max-width: 450px) {
+    
+        .item {
+            flex: 0 0 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+        }
+
+        .container {
+            flex-direction: column;
+        }
+    }
     </style>
 </head>
 
@@ -128,7 +145,7 @@
     <div class="location">
     <p>6665 Delmar Blvd, St. Louis, MO 63130</p>
 
-    <a href="https://www.google.com/maps?s=web&lqi=ChJzZW91bCB0YWNvIGFkZHJlc3MiAkgBSJ2Pg4jdgYCACFoUEAAQARgAGAEiCnNlb3VsIHRhY2-SARdhc2lhbl9mdXNpb25fcmVzdGF1cmFudOABAA&vet=12ahUKEwjxuoGi352SAxWi8bsIHXbfOFAQ1YkKegQIHBAB..i&cs=0&um=1&ie=UTF-8&fb=1&gl=us&sa=X&geocode=KRmVhZhTNd-HMQ7EuBTzU8u8&daddr=6665+Delmar+Blvd,+University+City,+MO+63130">
+    <a href="https://www.google.com/maps/place/Seoul+Taco/@38.6563193,-90.3076129,17z/data=!3m2!4b1!5s0x87df355240b819cd:0x6a1776963b7446f0!4m6!3m5!1s0x87df355398859519:0xbccb53f314b8c40e!8m2!3d38.6563193!4d-90.3076129!16s%2Fg%2F11r8j1kxy?entry=ttu&g_ep=EgoyMDI2MDIwMS4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D">
          View on Map
     </a>
     </div>
