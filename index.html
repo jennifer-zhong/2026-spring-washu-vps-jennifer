@@ -4,47 +4,138 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jennifer's Class Website, Spring 2026 at WashU</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 
     <style>
      body {
-        background-color: #caecff;
-        font-size: 18px;
+        background-color: #dbf3ff;
+        font-size: 20px;
         margin: 0;
         padding: 10px;
+        color: rgb(37, 125, 166);
+        text-align: center;
         
     }
 
     h1 {
-        font-size: 40px;
-        color: rgb(34, 38, 148);
-        font: Cambria;
+        font-size: 48px;
+        color: rgb(53, 148, 192);
+        font-family: "DM Serif Display", serif;
+        font-weight: 400;
+        font-style: normal;
+        text-align: center;
+        margin: 25px 0;
     }
+
+    hr {
+        border: none;
+        height: 1.5px; 
+        background-color: #032e4b; 
+    }
+
+    .category {
+        font-size: 22px;
+        color: #032e4b;
+        font-family: "DM Serif Display", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .subtitle {
+        font-size: 22px;
+        color: #032e4b;
+        font-family: "DM Serif Display", serif;
+        font-weight: 400;
+        font-style: normal;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+     a {
+        color: rgb(37, 125, 166);
+        font-weight: bold;
+    }
+    .container {
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        flex-wrap: wrap; 
+        flex-direction: row;
+    }
+
+    .item {
+        box-sizing: border-box;
+        margin: 5px;
+        padding: 15px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-color: rgb(181, 222, 241);
+        border-width: 2px;
+        border-style: solid;
+        border-width: 3px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: inherit;
+    }
+    .item:hover {
+        background-color: rgba(255, 255, 255, 0.85);
+    }
+    
     </style>
 
 </head>
 <body>
-    <h1>Jennifer's class website!</h1>
-    <p>Welcome to my class website!</p>
+
+    <h1><b>Jennifer's Class Website</b></h1>
+
+    <div class="subtitle">
+    Visual Principles for Screen, Spring 2026 at WashU <br>
+    Welcome to my class website! 
+    </div>
+    
     <hr>
+
+    <div class = "category">
     <h2>Exercises</h2>
-    <ul>
-        <li><a href="profile-card.html">Profile Card</a></li>
-        <li>Collection of Things</li>
-    </ul>
+    </div>
+    
+    <div class="container">
+    <a class="item" href="profile-card.html">Profile Card</a>
+    <div class="item">
+    Collection of Things<br>
+    </div>
+    </div>
+
+    <div class="category">
     <h2>Readings</h2>
-    <ul>
-        <li><a href="reading1.html">Restaurant Websites</a></li>
-        <li><a href="reading2.html">The New Turing Test</a></li>
-        <li><a href="reading3.html">Cyborgs vs. Rooms</a></li>
-        <li><a href="reading4.html">My Website is a Shifting House...</a></li>
-    </ul>
+    </div>
+
+    <div class="container">
+    <a class="item" href="reading1.html">Restaurant Websites</a>
+    <a class="item" href="reading2.html">The New Turing Test</a>
+    <a class="item" href="reading3.html">Cyborgs vs. Rooms</a>
+    <a class="item" href="reading4.html">My Website is a Shifting House...</a>
+    <a class="item" href="reading5.html">Eno Documentary</a>
+    </div>
+  
+    <div class="category">
     <h2>Projects</h2>
-    <ul>
-        <li><a href="project-1/index.html" >Project 1. Restaurant or Café Variations</a></li>
-        <li>Project 2. Book → Website</li>
-        <li>Project 3. Standby Mode</li>
-    </ul>
+    </div>
+
+    <div class="container">
+    <a class="item" href="project-1/index.html">Project 1. Restaurant or Café Variations</a>
+    <div class="item">
+    Project 2. Book → Website<br>
+    </div>
+    <div class="item">
+    Project 3. Standby Mode<br>
+    </div>
+    </div>
     </body>
 </body>
 </html>
