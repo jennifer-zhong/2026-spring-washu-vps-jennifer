@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Normal - Objects</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: helvetica;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.7);
+            border-bottom: 1px solid #e0e0e0;
+            padding: 1.5rem 2rem;
+            position: sticky;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            backdrop-filter: blur(5px);
+        }
+
+        .header-title {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 2rem;
+        }
+
+        .header-title h1 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #000;
+        }
+
+        .header-title h1 a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .header-title p {
+            font-size: 0.85rem;
+            color: #666;
+            font-weight: 300;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            justify-content: flex-end;
+        }
+
+        .page {
+            text-decoration: none;
+            color: #333;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            transition: color 0.3s ease;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 0.25rem;
+        }
+
+        .page:hover {
+            color: #000;
+            border-bottom-color: #000;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .object-section {
+            margin-bottom: 4rem;
+            padding-top: 2rem;
+        }
+
+        .object-section h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 0.5rem;
+        }
+
+        .object-section h3 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .object-section p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem;
+                gap: 0.75rem;
+            }
+
+            .header-title {
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 0.25rem;
+            }
+
+            .header-title h1 {
+                font-size: 1.75rem;
+            }
+
+            .header-title p {
+                font-size: 1rem;
+                margin-bottom: 0.2rem;
+            }
+
+            nav {
+                gap: 1rem;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+            }
+
+            .page {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-title">
+            <h1><a href="home.html">Super Normal</a></h1>
+            <p>Naoto Fukasawa & Jasper Morrison</p>
+        </div>
+        <nav>
+            <a class="page" href="about.html">ABOUT</a>
+            <a class="page" href="index.html">INDEX</a>
+            <a class="page" href="objects.html">OBJECTS</a>
+            <a class="page" href="photos.html">PHOTOS</a>
+            <a class="page" href="interview.html">INTERVIEW</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <section id="object-1" class="object-section">
+            <h2>1. Wastepaper basket "in attesa"</h2>
+            <h3>1971 &nbsp Enzo Mari &nbsp Danese, Italy &nbsp polypropylene</h3>
+            <p>A cylinder is the most normal form that a wastepaper basket takes. With a slight tilt in the direction in which people toss their garbage, this wastepaper basket has become a new normal. The lip of the wastepaper basket being slightly thicker makes it easier to carry. Generally with molded plastic goods, attempts are made to keep the thickness of the plastic as uniform as possible to create a smooth surface. If there is a thicker section in a uniform material, a dent may appear as the material hardens, since the temperature doesn't drop uniformly through the material. This is called a "dimple defect," and it is usual for molded goods with many of these dimples to be considered poor quality. But with this wastepaper basket, it has been possible to achieve such a dimple the entire way around the lip of the wastepaper basket mouth, so that it is thicker than the rest of the body. 
+It is not easy to revamp something normal, making it easier to use and thus creating a new normal. This wastepaper basket has succeeded in generating a normal that surpasses normal by using a technical factor, generally considered to be negative, to positive effect. </p>
+        </section>
+
+        <section id="object-2" class="object-section">
+            <h2>2. Small Chair</h2>
+            <h3>2005 &nbspNaoto Fukasawa &nbsp Maruni Wood Industry, Japan &nbsp beech</h3>
+            <p>A chair with a squarish seat and cylindrical legs was a common theme in the 1970s, but always done in an uncompromisingly modern way, with no gesture to the body or reminder of the past. This one goes further, and in the gentle curve of the back legs we sense a tradition, older than the first Thonet chair, of the kind of comfort that is suggested by the relaxed lines of its structure. It's modern enough not to be concerned with being modern. </p>
+        </section>
+
+        <section id="object-3" class="object-section">
+            <h2>Citrus basket 370</h2>
+            <h3>1952 &nbsp Ufficio technico Alessi, Italy &nbsp aluminum stainless steel</h3>
+            <p>You'd imagine this fruit basket (present in almost every bar in Italy) had been designed by Sottsass in the 1970s, but in fact it was designed by the Alessi technical office in 1952. It probably takes inspiration from a tradition of more finely wired bread- baskets, which were made much earlier. Increasing the scale of the wire and adjusting the proportions to suit a new function make this object genuinely Super Normal. </p>
+        </section>
+    </div>
+
+    
+</body>
+</html>
