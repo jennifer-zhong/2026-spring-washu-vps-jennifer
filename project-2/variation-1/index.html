@@ -75,6 +75,32 @@
             border-bottom-color: #000;
         }
 
+        .filter-bar {
+            max-width: 900px;
+            margin: 1.25rem auto 0;
+            padding: 0 2rem;
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            border: 1px solid #d5d5d5;
+            background: #fff;
+            color: #333;
+            font-family: helvetica;
+            font-size: 0.85rem;
+            padding: 0.45rem 0.8rem;
+            border-radius: 999px;
+            cursor: pointer;
+        }
+
+        .filter-btn.active {
+            background: #333;
+            color: #fff;
+            border-color: #333;
+        }
+
         .content {
             max-width: 900px;
             margin: 3rem auto;
@@ -162,6 +188,14 @@
             <a class="page" href="interview.html">INTERVIEW</a>
         </nav>
     </header>
+
+    <div class="filter-bar">
+        <button class="filter-btn active" type="button">All</button>
+        <button class="filter-btn" type="button">Furniture</button>
+        <button class="filter-btn" type="button">Lighting</button>
+        <button class="filter-btn" type="button">Kitchen</button>
+        <button class="filter-btn" type="button">Desk</button>
+    </div>
 
     <div class="content">
         <div class="object-item">
