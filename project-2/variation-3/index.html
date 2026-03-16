@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Normal - Index</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 24px;
+            background: white;
+            border-bottom: 2px solid #c3c3c3;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .header-title h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .header-title h1 a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        nav {
+            display: flex;
+            gap: 16px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #353535;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #0083da;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 48px 32px;
+            font-family: courier, monospace;
+        }
+
+        .object-item {
+            margin-bottom: 12px;
+        }
+
+        .object-item a {
+            text-decoration: none;
+            color: #353535;
+            display: block;
+            transition: color 0.2s ease;
+        }
+
+        .object-item a:hover {
+            color: #daab00;
+        }
+
+        .object-item h2 {
+            display: inline;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .object-item h3 {
+            display: inline;
+            font-size: 16px;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 32px 24px;
+            }
+
+            .object-item h2,
+            .object-item h3 {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-title">
+            <h1><a href="home.html">Super Normal</a></h1>
+        </div>
+        <nav>
+            <a class="page" href="about.html">ABOUT</a>
+            <a class="page" href="index.html">INDEX</a>
+            <a class="page" href="photos.html">PHOTOS</a>
+            <a class="page" href="interview.html">INTERVIEW</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <div class="object-item">
+            <a href="objects.html#object-1">
+                <h2>1. Wastepaper Basket in "attesa"</h2>
+                <h3></h3>1971, Enzo Mari, Danese, Italy, polypropylene</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="objects.html#object-2">
+                <h2>2. Small Chair</h2>
+                <h3>2005 &nbspNaoto Fukasawa &nbsp Maruni Wood Industry, Japan &nbsp beech</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="objects.html#object-3">
+                <h2>3. Citrus Basket 370</h2>
+                <h3>1952 &nbsp Ufficio technico Alessi, Italy &nbsp aluminum stainless steel</h3>
+            </a>
+        </div>
+    </div>
+    
+</body>
+</html>

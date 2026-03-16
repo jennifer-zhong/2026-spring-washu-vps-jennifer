@@ -4,12 +4,246 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interview</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Helvetica, Arial, sans-serif;
+            background: #d3e8f8;
+            color: #1f1f1f;
+            line-height: 1.6;
+        }
+
+        .page-wrap {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.25rem 3rem;
+        }
+
+        .page-header {
+            background: rgba(255, 255, 255, 0.82);
+            border: 1px solid #e4e4e4;
+            border-radius: 14px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-header h1 {
+            margin: 0;
+            font-size: 1.9rem;
+            line-height: 1.2;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .page-header h2 {
+            margin: 0.5rem 0 0;
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: #555;
+        }
+
+        .interviewee {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid #e4e4e4;
+            border-radius: 14px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .interviewee .eyebrow {
+            margin: 0;
+            font-size: 0.82rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #777;
+        }
+
+        .interviewee h3 {
+            margin: 0.35rem 0 0;
+            font-size: 1.35rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .interviewee h4 {
+            margin: 0.15rem 0 0.8rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #555;
+            font-family: ;
+        }
+
+        .interviewee p {
+            margin: 0;
+        }
+
+        .topic-title {
+            margin: 2rem 0 0.9rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+
+        .qa details {
+            background: rgba(255, 255, 255, 0.78);
+            border: 1px solid #e2e2e2;
+            border-radius: 10px;
+            padding: 0.75rem 0.95rem;
+            margin-bottom: 0.7rem;
+        }
+
+        .qa summary {
+            cursor: pointer;
+            font-weight: 600;
+            list-style: none;
+        }
+
+        .qa summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .qa summary::before {
+            content: "+";
+            display: inline-block;
+            width: 1rem;
+            margin-right: 0.45rem;
+            color: #666;
+        }
+
+        .qa details[open] summary::before {
+            content: "−";
+        }
+
+        .qa .answer {
+            margin-top: 0.7rem;
+            color: #333;
+        }
+
+        .insights {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid #e4e4e4;
+            border-radius: 14px;
+            padding: 1.4rem 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .insights h2 {
+            margin: 0 0 0.9rem;
+            font-size: 1.25rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .insights ul {
+            margin: 0;
+            padding-left: 1.2rem;
+        }
+
+        .insights li {
+            margin-bottom: 0.8rem;
+        }
+    </style>
 </head>
 <body>
-<h1>Interview with ...</h1>
-<h2>Introduction</h2>  
-<h2>UI/UX Choices while Coding</h2>
-<h2>AI in the Workplace</h2>  
-<h2>AI and Art</h2>  
+    <main class="page-wrap">
+        <header class="page-header">
+            <h1>Design, Creativity, and AI in Software Development</h1>
+            <h2>Visual Principles for Screen Interview</h2>
+        </header>
+
+        <section class="interviewee">
+            <p class="eyebrow">Meet the Interviewee</p>
+            <h3>Ruisi Zhong</h3>
+            <h4>Software Engineer, GoodRx</h4>
+            <p>For this project, I interviewed my sister, a software developer at a healthcare technology company. We talked about the role of design and creativity in software development, the design choices developers make while coding, the use of AI in the workplace, and the use of AI in art.</p>
+        </section>
+
+        <h2 class="topic-title">Design and Creativity in Software Development</h2>
+        <section class="qa">
+            <details>
+                <summary>Can you briefly introduce yourself and describe your role as a software engineer?</summary>
+                <p class="answer">I'm a software engineer at GoodRx where I've worked for about 2 years. My role involves designing and implementing software solutions to improve the user experience and functionality of our products, specifically a subscription service for prescriptions. I collaborate with product managers and designers to build features that meet user needs and enhance the overall performance of the products we make.</p>
+            </details>
+
+            <details>
+                <summary>How do you think design and creativity play a role in software development?</summary>
+                <p class="answer">Design and creativity are essential in software development because they help create efficient, user-friendly, and innovative solutions. Good design ensures software is easy to use and provides a strong user experience. Creativity allows developers to think outside the box and come up with unique approaches to solving problems.</p>
+            </details>
+
+            <details>
+                <summary>Do you think programming has creative elements? Why or why not?</summary>
+                <p class="answer">Yes. There are often multiple ways to get something done, and you have to think of the best way but also the simplest way to implement something. You don't want to overengineer, but still want to make sure the functionality is there. There’s also a lot of liberty in how features and designs are implemented and how you structure your code.</p>
+            </details>
+
+            <details>
+                <summary>What do you mean by overengineering something?</summary>
+                <p class="answer">I don't want to make something more complicated than it needs to be. For example, if I'm asked to make a button, I don't want to overengineer it by including ways to change the color if no one asked for that, because this might make future features harder to implement.</p>
+            </details>
+        </section>
+
+        <h2 class="topic-title">Design Choices while Coding</h2>
+        <section class="qa">
+            <details>
+                <summary>How do you collaborate with others to integrate design into your product development?</summary>
+                <p class="answer">The information to power your website has to come from somewhere. I work with front-end and mobile engineers to figure out the data they need to implement a design. I get a design from the design team and figure out what data to pull from the database and how to structure it so it is easy for front-end engineers to use. I also make sure the design is feasible within our technology constraints.</p>
+            </details>
+
+            <details>
+                <summary>What does implementing a design for website development look like for you?</summary>
+                <p class="answer">Designers create a wireframe in Figma that gets sent to the development team, and then we use that to decide where everything should go on a page. I work mostly on backend development, so I focus on structuring data so front-end engineers can implement the design using HTML and CSS while keeping everything efficient and functional.</p>
+            </details>
+
+            <details>
+                <summary>What kind of design choices do you make while coding?</summary>
+                <p class="answer">There are decisions I have to make, such as what users see while waiting for a response. If the backend takes a while to process, you need a loading screen or animation to show the user that something is happening. I also make design choices related to user experience so information is easy to understand and features work properly. Outside of user experience, I make architectural decisions in how I structure code, including where things should live and what databases should look like.</p>
+            </details>
+
+            <details>
+                <summary>How do choices like layout, spacing, and typography impact user trust?</summary>
+                <p class="answer">I think these elements can really impact user trust. At a healthcare company like GoodRx, people rely on accurate information to make decisions about medications. A clear, organized layout helps users quickly find important information, and spacing and typography make information easier to read and understand.</p>
+            </details>
+        </section>
+
+        <h2 class="topic-title">Artificial Intelligence</h2>
+        <section class="qa">
+            <details>
+                <summary>How often do you use AI in the workplace?</summary>
+                <p class="answer">Almost every day. I use Cursor to ask questions about the codebase because it can scan thousands of files quickly to find where functionality lives. I can also use AI to help write code but it's not very good so a human still needs to review it. However, if I ask for a few ways to implement something, one of those ways will often work. I also use it to debug errors which works pretty well.</p>
+            </details>
+
+            <details>
+                <summary>How do you think AI will impact the future of software development?</summary>
+                <p class="answer">AI is currently a very useful tool but not a replacement for human developers. Right now, it is good at scanning large datasets and providing suggestions, but humans still need to review results. In the future, AI will likely get more advanced, but I’m not worried about it replacing my job. Maybe in a few years.</p>
+            </details>
+
+            <details>
+                <summary>What are your opinions on using AI to generate art?</summary>
+                <p class="answer">I think it’s interesting. AI can be useful for generating ideas and inspiration, but I don’t think it can replace human creativity. AI-generated art can be cool and impressive to see, but I think it lacks the emotional depth and creativity of work made by human artists.</p>
+            </details>
+
+            <details>
+                <summary>Do you think AI-generated art can be considered “creative”?</summary>
+                <p class="answer">Right now, I don’t think AI can be considered creative because it generates work from exisitng ideas that it's been trained on. It can create new combinations of existing ideas, but not something genuinely original. That might change in the future but I'm not sure.</p>
+            </details>
+
+            <details>
+                <summary>Do you think AI enhances creativity or makes people less creative?</summary>
+                <p class="answer">I think it can be both. It can provide inspiration and help people come up with ideas, but it can also make people less creative if they rely on it too much and stop using their own imagination.</p>
+            </details>
+        </section>
+
+        <section class="insights">
+            <h2>Key Insights</h2>
+            <ul>
+                <li><strong>Design and engineering decisions are interconnected.</strong> Engineers must consider how backend processes affect the user experience, such as implementing loading states when data retrieval takes time.</li>
+                <li><strong>Programming involves creativity.</strong> There are often multiple ways to solve a problem, and engineers must balance efficiency, simplicity, and maintainability without over-engineering solutions.</li>
+                <li><strong>User trust is critical in healthcare platforms.</strong> Clear layouts, responsive interfaces, and reliable functionality contribute to users feeling confident in the platform.</li>
+                <li><strong>AI is becoming a daily tool for developers but still requires human oversight.</strong> Tools like AI code assistants can scan large codebases quickly and suggest solutions but still need to be reviewed by humans.</li>
+                <li><strong>AI can both enhance and challenge creativity.</strong> AI can help generate ideas and accelerate the creative process, but overreliance may reduce independent problem-solving and unique ideas.</li>
+            </ul>
+        </section>
+    </main>
+
 </body>
 </html>
