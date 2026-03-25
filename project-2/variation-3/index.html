@@ -7,6 +7,7 @@
     <style>
         body {
             margin: 0;
+            padding: 0px 0px;
         }
 
         header {
@@ -48,11 +49,41 @@
             color: #0083da;
         }
 
+        .header-title h1 a:hover {
+            color: #e31313;
+        }
+
         .content {
             max-width: 800px;
             margin: 0 auto;
             padding: 48px 32px;
             font-family: courier, monospace;
+        }
+
+
+        .page-toggle-wrap {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 99;
+        }
+
+        .page-toggle {
+            display: inline-block;
+            text-decoration: none;
+            border: 1px solid #a9a9a9;
+            background: #ffffff;
+            color: #353535;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 13px;
+            letter-spacing: 0.08em;
+            font-weight: 700;
+            padding: 7px 14px;
+        }
+
+        .page-toggle:hover {
+            color: #0083da;
+            border-color: #0083da;
         }
 
         .object-item {
@@ -75,13 +106,18 @@
             font-size: 16px;
             font-weight: 600;
             margin: 0;
+            font-family: Helvetica, Arial, sans-serif;
         }
 
         .object-item h3 {
             display: inline;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 400;
             margin: 0;
+        }
+
+        .current-page {
+            color: #0083da;
         }
 
         @media (max-width: 768px) {
@@ -98,39 +134,385 @@
 </head>
 <body>
     <header>
-        <div class="header-title">
-            <h1><a href="home.html">Super Normal</a></h1>
+          <div class="header-title">
+            <h1><a href="/project-2/variation-3/home2.html">Super Normal</a></h1>
         </div>
         <nav>
-            <a class="page" href="about.html">ABOUT</a>
-            <a class="page" href="index.html">INDEX</a>
-            <a class="page" href="photos.html">PHOTOS</a>
-            <a class="page" href="interview.html">INTERVIEW</a>
+            <a class="page" href="/project-2/variation-3/about.html">ABOUT</a>
+            <a class="current-page" href="/project-2/variation-3/index.html">INDEX</a>
+            <a class="page" href="/project-2/variation-3/photos.html">PHOTOS</a>
+            <a class="page" href="/project-2/variation-3/interview.html">INTERVIEW</a>
         </nav>
     </header>
 
     <div class="content">
+        <div class="page-toggle-wrap">
+            <a class="page-toggle" href="index-expanded.html">EXPAND</a>
+        </div>
+
         <div class="object-item">
-            <a href="objects.html#object-1">
+            <a href="index-expanded.html#object-1">
                 <h2>1. Wastepaper Basket in "attesa"</h2>
-                <h3></h3>1971, Enzo Mari, Danese, Italy, polypropylene</h3>
+                <h3>1971 &nbsp Enzo Mari &nbsp Danese, Italy &nbsp polypropylene</h3>
             </a>
         </div>
 
         <div class="object-item">
-            <a href="objects.html#object-2">
+            <a href="index-expanded.html#object-2">
                 <h2>2. Small Chair</h2>
                 <h3>2005 &nbspNaoto Fukasawa &nbsp Maruni Wood Industry, Japan &nbsp beech</h3>
             </a>
         </div>
 
         <div class="object-item">
-            <a href="objects.html#object-3">
+            <a href="index-expanded.html#object-3">
                 <h2>3. Citrus Basket 370</h2>
-                <h3>1952 &nbsp Ufficio technico Alessi, Italy &nbsp aluminum stainless steel</h3>
+                <h3>1952 &nbsp Alessi, Italy &nbsp aluminum stainless steel</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-4">
+                <h2>4. "Smokey joe" silver charcoal grill</h2>
+                <h3>Weber, USA &nbsp steel, Aluminum</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-5">
+                <h2>5. Air filter</h2>
+                <h3> 2003 &nbsp Muji, Japan </h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-6">
+                <h2>6. Square brush washer</h2>
+                <h3>1990 &nbsp Marna, Japan &nbsp polypropylene</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-7">
+                <h2>7. Bathroom stool</h2>
+                <h3>1990 &nbsp Marna, Japan &nbsp polypropylene</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-8">
+                <h2>8. Bucket</h2>
+                <h3>Italy &nbsp plastic</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-9">
+                <h2>9. Shopping Basket</h2>
+                <h3>Cyunichi Jyuki, Japan &nbsp polypropylene</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-10">
+                <h2>10. Bicycle</h2>
+                <h3>2005 &nbsp Muji, Japan</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-11">
+                <h2>11. Chair "Mariolina"</h2>
+                <h3>2002 &nbsp Enzo Mari &nbsp Magis, Italy &nbsp steel in epoxy resin, polypropylene</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-12">
+                <h2>12. Ashtray</h2>
+                <h3>Noritake, Japan &nbsp melamine</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-13">
+                <h2>13. "Uni-tray"</h2>
+                <h3>1976 1999 &nbsp Riki Watanabe &nbsp Sato Shoji &nbsp stainless steel</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-14">
+                <h2>14. "Canary" sandals </h2>
+                <h3>Nishibe Chemical, Japan</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-15">
+                <h2>15. Goose Egg</h2>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-16">
+                <h2>16. Calculator</h2>
+                <h3>2004 &nbsp Muji, Japan &nbsp aluminum</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-17">
+                <h2>17. Ashtray</h2>
+                <h3>2003 &nbsp Muji, Japan &nbsp porcelain</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-18">
+                <h2>18. Bottle Opener "Stavros"</h2>
+                <h3>1999 &nbsp Marc Newson &nbsp Alessi, Italy &nbsp stainless steel, plastic</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-19">
+                <h2>19. Stools "Deja-vu"</h2>
+                <h3>2005 &nbsp Naoto Fukasawa &nbsp Magis Italy &nbsp aluminum</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-20">
+                <h2>20. Cocktail shaker 870</h2>
+                <h3>1957 &nbsp Carlo Mazzeri/Luigi Massoni &nbsp Alessi, Italy &nbsp stainless steel</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-21">
+                <h2>21. Sieve</h2>
+                <h3>Ikeda Plastic Sales, Japan &nbsp polypropylene</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-22">
+                <h2>22. Ice bucket 871</h2>
+                <h3>1957 &nbsp Carlo Mazzeri/Luigi Massoni &nbsp Alessi, Italy &nbsp stainless steel</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-23">
+                <h2>23. Fiber-tipped pen</h2>
+                <h3>Pentel, Japan &nbsp recyled polypropylene, recycled polyethylene</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-24">
+                <h2>24. Package-carrier handle</h2>
+                <h3>Japan &nbsp polypropylene</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-25">
+                <h2>25. Wastebin "Trash"</h2>
+                <h3>2005 &nbsp Jasper Morrison &nbsp Magis, Italy &nbsp polypropylene</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-26">
+                <h2>26. "Less"</h2>
+                <h3>1994 &nbsp Jean Nouvel &nbsp Unifor, Italy &nbsp steel</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-27">
+                <h2>27. Coat Stand "Hut ab"</h2>
+                <h3>1998 &nbsp Konstantin Grcic &nbsp Nils Holger Moormann, Germany &nbsp ash</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-28">
+                <h2>28. Sake glass</h2>
+                <h3>1976 &nbsp Sori Yangi &nbsp Toyo Sasaki Glass, Japan &nbsp glass</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-29">
+                <h2>29. "G type" soy sauce dispenser</h2>
+                <h3>1958 &nbsp Masahiro Mori &nbsp Hakusan Porcelain, Japan &nbsp porcelain</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-30">
+                <h2>30. Table salt shaker</h2>
+                <h3>The Salt Industry Center of Japan &nbsp glass, polypropylene, and polyethylene</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-31">
+                <h2>31. Pepper mill 76</h2>
+                <h3>1965 &nbsp Carlo Mazzeri/Anselmo Vitale &nbsp Alessi, Italy &nbsp stainless steel</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-32">
+                <h2>32. Sugar sifter 70</h2>
+                <h3>1962 &nbsp Carlo Mazzeri/Anselmo Vitale &nbsp Alessi, Italy &nbsp stainless steel</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-33">
+                <h2>33. Paper clip</h2>
+                <h3>Norica, Germany</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-34">
+                <h2>34. Digital camera</h2>
+                <h3>2005 &nbsp Masahiro Kurita/Tatsuo Okuda &nbsp Ricoh, Japan &nbsp diecast magnesium</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-35">
+                <h2>35. Cutter</h2>
+                <h3>NT Cutter, Japan &nbsp ABS plastic, polyoxymethylene</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-36">
+                <h2>36. Tea cup</h2>
+                <h3>2004 &nbsp Muji,Japan &nbsp porcelain</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-37">
+                <h2>37. Ice cream spoon</h2>
+                <h3>2000 &nbsp Sori Yanagi &nbsp Sato Shoji, Japan &nbsp stainless steel</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-38">
+                <h2>38. Thermometer</h2>
+                <h3>Empex Instruments, Japan &nbsp wood,glass</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-39">
+                <h2>39. Flour scoop</h2>
+                <h3>stainless steel</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-40">
+                <h2>40. Bowl and Sieve</h2>
+                <h3>stainless steel</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-41">
+                <h2>41. Vermilion calligraphy ink</h2>
+                <h3>Kaimei, japan &nbsp polyethylene</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-42">
+                <h2>42. "Yamato" library paste bottle</h2>
+                <h3>Yamato, Japan &nbsp polyethylene</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-43">
+                <h2>43. Salt castor/Spice holder </h2>
+                <h3>2002 &nbsp Marc Newson &nbsp Alessi, Italy &nbsp crystal glass, stainless steel</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-44">
+                <h2>44. Bar sugar bowl</h2>
+                <h3>1961/1964 &nbsp Carlo Mazzer/Anselmo Vitale &nbsp Alessi, Italy &nbsp stainless steel</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-45">
+                <h2>45. Grill pan</h2>
+                <h3>2002 &nbsp Sori Yanagi &nbsp Sato Shoji, Japan &nbsp cast iron</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-46">
+                <h2>46. Milkbottle</h2>
+                <h3>1965 &nbsp TOYO Glass, Japan &nbsp glass</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-47">
+                <h2>47. Tumbler</h2>
+                <h3>Toyo Sasaki Glass, Japan &nbsp tempered glass</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-48">
+                <h2>48. Wineglass</h2>
+                <h3>glass</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-49">
+                <h2>49. Door handle</h2>
+                <h3>1990 &nbsp Jasper Morrison &nbsp FSB, Germany &nbsp cast aluminum</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-50">
+                <h2>50. Vegetable peeler</h2>
+                <h3>1947 &nbsp Alfred Neweczersal &nbsp Zena, Switzerland &nbsp aluminum, stainless steel</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-51">
+                <h2>51. Spanners</h2>
+                <h3>MBPerraud outillage, France &nbsp Chromed forged steel</h3>
+            </a>
+        </div>
+
+        <div class="object-item">
+            <a href="index-expanded.html#object-52">
+                <h2>52. Felt undershoes</h2>
+                <h3>Germany &nbsp felt</h3>
             </a>
         </div>
     </div>
-    
+
 </body>
 </html>

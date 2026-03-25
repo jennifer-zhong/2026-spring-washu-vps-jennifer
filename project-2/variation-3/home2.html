@@ -7,99 +7,152 @@
     <style>
         body {
             margin: 0;
-            font-family: Helvetica, Arial, sans-serif;
-            background: #ffffff;
-        }
-
-        .collection-grid {
-            display: grid;
-            grid-template-columns: minmax(140px, 1fr) minmax(240px, 30vw) minmax(140px, 1fr);
-            gap: 16px 28px;
-            padding: 26px 18px 40px;
             min-height: 100vh;
         }
 
-        .center-hub {
-            grid-column: 2;
-            grid-row: 1 / span 300;
-            position: sticky;
-            top: 50vh;
-            transform: translateY(-50%);
+        .center-nav {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 100;
+            font-family: Helvetica, Arial, sans-serif;
             text-align: center;
-            align-self: start;
-            z-index: 10;
         }
 
-        .center-hub h1 {
+        .center-nav h1 {
             margin: 0;
-            font-size: 42px;
-            line-height: 0.95;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
+            font-size: clamp(38px, 7vw, 68px);
+            line-height: 1;
+            letter-spacing: 0.02em;
+            white-space: nowrap;
         }
 
-        .center-hub h1 a {
+        .center-nav h1 a {
             text-decoration: none;
             color: #000000;
         }
 
-        .center-hub h1 a:hover {
+        .center-nav h1 a:hover {
             color: #e31313;
         }
 
-        .center-nav {
-            margin-top: 18px;
+        nav {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 14px;
         }
 
-        .center-nav a {
+        nav a {
             text-decoration: none;
             color: #353535;
-            font-size: 13px;
-            letter-spacing: 0.08em;
-            font-weight: 700;
-            padding: 7px 14px;
-            border: 1px solid #a9a9a9;
-            background: #ffffff;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 4px 6px;
         }
 
-        .center-nav a:hover {
+        nav a:hover {
             color: #0083da;
-            border-color: #0083da;
         }
 
-        .object-box {
-            justify-self: center;
-            width: fit-content;
+        .collection-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px 36px;
+            padding: 40px 28px 60px;
+        }
+
+        @media (min-width: 701px) {
+            .center-nav {
+                pointer-events: none;
+            }
+
+            .center-nav a {
+                pointer-events: auto;
+            }
+
+            .collection-grid {
+                display: grid;
+                grid-template-columns: repeat(6, minmax(64px, 1fr));
+                gap: 24px 14px;
+                padding: 40px 36px 60px;
+            }
+
+            .object-box {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .object-box:nth-child(8n + 1) { grid-column: 1; }
+            .object-box:nth-child(8n + 2) { grid-column: 2; }
+            .object-box:nth-child(8n + 3) { grid-column: 5; }
+            .object-box:nth-child(8n + 4) { grid-column: 6; }
+            .object-box:nth-child(8n + 5) { grid-column: 2; }
+            .object-box:nth-child(8n + 6) { grid-column: 1; }
+            .object-box:nth-child(8n + 7) { grid-column: 6; }
+            .object-box:nth-child(8n) { grid-column: 5; }
+        }
+
+        @media (max-width: 700px) {
+            .center-nav {
+                background: rgba(255, 255, 255, 0.85);
+                backdrop-filter: blur(8px);
+                border-radius: 4px;
+                padding: 12px 10px;
+            }
+
+            .center-nav h1 {
+                font-size: clamp(30px, 10vw, 48px);
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+            }
+
+            nav a {
+                font-size: 13px;
+                letter-spacing: 0.08em;
+                font-weight: 700;
+                padding: 7px 14px;
+                border: 1px solid #a9a9a9;
+                background: rgba(255, 255, 255, 0.92);
+            }
+
+            nav a:hover {
+                border-color: #0083da;
+            }
         }
 
         .object-box img {
-            width: clamp(74px, 7.2vw, 98px);
+            width: 90px;
             height: auto;
             display: block;
             transition: transform 0.2s ease;
         }
 
-        .object-box:nth-of-type(5n + 1) {
+        .object-box:nth-child(5n + 1) {
             transform: translate(-12px, 10px) rotate(-4deg);
         }
 
-        .object-box:nth-of-type(5n + 2) {
+        .object-box:nth-child(5n + 2) {
             transform: translate(10px, -6px) rotate(3deg);
         }
 
-        .object-box:nth-of-type(5n + 3) {
+        .object-box:nth-child(5n + 3) {
             transform: translate(-4px, 18px) rotate(-2deg);
         }
 
-        .object-box:nth-of-type(5n + 4) {
+        .object-box:nth-child(5n + 4) {
             transform: translate(14px, 4px) rotate(5deg);
         }
 
-        .object-box:nth-of-type(5n) {
+        .object-box:nth-child(5n) {
             transform: translate(-8px, -10px) rotate(-3deg);
         }
 
@@ -107,41 +160,22 @@
             transform: scale(1.06) rotate(0deg);
             z-index: 2;
         }
-
-        @media (max-width: 840px) {
-            .collection-grid {
-                grid-template-columns: 1fr;
-                justify-items: center;
-                gap: 18px;
-                padding: 22px 12px 36px;
-            }
-
-            .center-hub {
-                position: static;
-                transform: none;
-                grid-column: 1;
-                grid-row: auto;
-                margin-bottom: 8px;
-            }
-
-            .object-box {
-                margin: 2px;
-            }
-        }
     </style>
     
 </head>
 <body>
-    <div class="collection-grid">
-        <aside class="center-hub">
-            <h1><a href="home.html">Super Normal</a></h1>
-            <nav class="center-nav">
+    <div class="center-nav">
+        <h1><a href="home2.html">Super Normal</a></h1>
+        <h2> Sensations of the Ordinary</h2>
+        <nav>
             <a class="page" href="about.html">ABOUT</a>
             <a class="page" href="index.html">INDEX</a>
             <a class="page" href="photos.html">PHOTOS</a>
             <a class="page" href="interview.html">INTERVIEW</a>
-            </nav>
-        </aside>
+        </nav>
+    </div>
+
+    <div class="collection-grid">
             <div class="object-box">
                 <a href="index-expanded.html#object-1"><img src="../drawings/1.png" alt="Object 1"></a>
             </div>
@@ -176,8 +210,7 @@
                 <a href="index-expanded.html#object-11"><img src="../drawings/11.png" alt="Object 11"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-12"><img src="../drawings/12.png" alt="Object 12"></a>
-            </div>
+                <a href="index-expanded.html#object-12"><img src="../drawings/12.png" alt="Object 12"></a>            </div>
             <div class="object-box">
                 <a href="index-expanded.html#object-13"><img src="../drawings/13.png" alt="Object 13"></a>
             </div>
@@ -273,6 +306,30 @@
             </div>
             <div class="object-box">
                 <a href="index-expanded.html#object-44"><img src="../drawings/44.png" alt="Object 44"></a>
+            </div>
+            <div class="object-box">
+                <a href="index-expanded.html#object-45"><img src="../drawings/45.png" alt="Object 45"></a>
+            </div>
+            <div class="object-box">
+                <a href="index-expanded.html#object-46"><img src="../drawings/46.png" alt="Object 46"></a>
+            </div>
+            <div class="object-box">
+                <a href="index-expanded.html#object-47"><img src="../drawings/47.png" alt="Object 47"></a>
+            </div>
+            <div class="object-box">
+                <a href="index-expanded.html#object-48"><img src="../drawings/48.png" alt="Object 48"></a>
+            </div>
+            <div class="object-box">
+                <a href="index-expanded.html#object-49"><img src="../drawings/49.png" alt="Object 49"></a>
+            </div>
+            <div class="object-box">
+                <a href="index-expanded.html#object-50"><img src="../drawings/50.png" alt="Object 50"></a>
+            </div>
+            <div class="object-box">
+                <a href="index-expanded.html#object-51"><img src="../drawings/51.png" alt="Object 51"></a>
+            </div>
+            <div class="object-box">
+                <a href="index-expanded.html#object-52"><img src="../drawings/52.png" alt="Object 52"></a>
             </div>
     </div>
 
