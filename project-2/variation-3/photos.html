@@ -55,6 +55,26 @@
         .current-page {
             color: #0083da;
         }
+
+        .photo-figure {
+            width: 100%;
+            max-width: 800px;
+            margin: 32px auto;
+        }
+
+        .photo-figure img {
+            width: 100%;
+            display: block;
+        }
+
+        .photo-figure figcaption {
+            margin-top: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 15px;
+            font-weight: 600;
+            color: #4d4d4d;
+            text-align: left;
+        }
     </style>
 </head>
 <body>
@@ -70,8 +90,20 @@
         </nav>
     </header>
 
-    <img src="/project-2/variation-1/supernormal-header.png" alt="Photo 1" style="width: 100%; max-width: 800px; display: block; margin: 32px auto;">
-    <img src="/project-2/photo.png" alt="Photo 1" style="width: 100%; max-width: 800px; display: block; margin: 32px auto;">
+    <figure class="photo-figure">
+        <img src="/project-2/variation-1/supernormal-header.png" alt="Axis Gallery in Japan">
+        <figcaption><b>Super Normal objects in Axis Gallery, Japan.</b> Curated By Jasper Morrison & Naoto Fukasawa. </figcaption>
+    </figure>
+
+    <figure class="photo-figure">
+        <img src="/project-2/photo.png" alt="Super Normal objects">
+        <figcaption>A few Super Normal objects in the collection. </figcaption>
+    </figure>
+
+    <figure class="photo-figure">
+        <img src="/project-2/photo3.png" alt="Close-up of Super Normal objects">
+        <figcaption>Close-up view of 30. Table salt shaker, 31. Pepper mill, and 32. Sugar sifter.</figcaption>
+    </figure>
 
     
 </body>

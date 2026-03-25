@@ -7,6 +7,10 @@
     <style>
         body {
             margin: 0;
+            font-family: "Courier New", Courier, monospace;
+            color: #353535;
+            background: #ffffff;
+            
         }
 
         header {
@@ -55,6 +59,136 @@
         .current-page {
             color: #0083da;
         }
+
+        .interview-wrap {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 42px 26px 64px;
+            box-sizing: border-box;
+        }
+
+        .interview-title {
+            margin: 0 0 18px 0;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: clamp(28px, 4vw, 46px);
+            font-weight: 800;
+            line-height: 1.08;
+            color: #000000;
+        }
+
+        .interview-subtitle {
+            margin: 0 0 30px 0;
+            font-size: 16px;
+            line-height: 1.6;
+            max-width: 720px;
+        }
+
+        .quote-pullout {
+            margin: 0 0 38px 0;
+            padding: 18px 20px;
+            border: 1px solid #bdbdbd;
+            background: #f7f7f7;
+        }
+
+        .quote-pullout p {
+            margin: 0;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: clamp(18px, 2.2vw, 28px);
+            font-weight: 700;
+            line-height: 1.25;
+            color: #181818;
+        }
+
+        .quote-source {
+            margin-top: 10px;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 14px;
+            font-weight: 400;
+            color: #4b4b4b;
+        }
+
+        .qa-item {
+            margin-bottom: 16px;
+            border: 1px solid #d2d2d2;
+            background: #fff;
+        }
+
+        .qa-item[open] {
+            border-color: #9a9a9a;
+        }
+
+        .qa-item summary {
+            padding: 14px 16px;
+            cursor: pointer;
+            list-style: none;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 19px;
+            font-weight: 700;
+            line-height: 1.35;
+            color: #1a1a1a;
+            position: relative;
+            padding-right: 48px;
+        }
+
+        .qa-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .qa-item summary::after {
+            content: "+";
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 26px;
+            font-weight: 400;
+            color: #7a7a7a;
+            line-height: 1;
+        }
+
+        .qa-item[open] summary::after {
+            content: "-";
+        }
+
+        .qa-answer {
+            border-top: 1px solid #ececec;
+            padding: 16px;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 16px;
+            line-height: 1.75;
+        }
+
+        .qa-answer p {
+            margin: 0 0 14px 0;
+        }
+
+        .qa-answer p:last-child {
+            margin-bottom: 0;
+        }
+
+        .speaker {
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            .interview-wrap {
+                padding: 30px 16px 48px;
+            }
+
+            .interview-subtitle,
+            .qa-answer {
+                font-size: 15px;
+            }
+
+            .qa-item summary {
+                font-size: 17px;
+            }
+
+            .quote-source {
+                font-size: 13px;
+            }
+        }
         
     </style>
 </head>
@@ -71,6 +205,54 @@
         </nav>
     </header>
 
-    
+    <main class="interview-wrap">
+        <h1 class="interview-title">A Conversation with Naoto Fukasawa and Jasper Morrison</h1>
+        <p class="interview-subtitle">Francesca Picchi interviews Naoto Fukasawa and Jasper Morrison.</p>
+
+        <aside class="quote-pullout" aria-label="Featured quote">
+            <p> Super Normal is... re-realizing something that you already knew, re-acknowledging what you naturally thought was good in something."</p>
+            <div class="quote-source">Naoto Fukasawa</div>
+        </aside>
+
+        <details class="qa-item" open>
+            <summary>Super Normal has been received as a kind of manifesto of what design should be according to you. Today there is a certain ambiguity about the term design (about its meaning); generally it is perceived as something to "make nicer things." Can Super Normal be considered as a sort of theory? Or an attempt at theorizing what good design is or should be?</summary>
+            <div class="qa-answer">
+                <p><span class="speaker">Naoto Fukasawa:</span> Super Normal is not a theory. I believe it's re-realizing something that you already knew, re-acknowledging what you naturally thought was good in something, It's true that design is all about improving what already exists, but there's also the danger that things that were already good get changed.</p>
+                <p>Design is expected to provide something "new" or "beautiful" or "special." When we look at the things around us with such a mindset, those things outside "design" are viewed as being "normal" or "ugly" in contrast. Super Normal consists of the things that we overlook when we focus too much on "design"-I think it points to those things in our everyday lives that we naturally hold an affinity for.</p>
+                <p>I believe Super Normal is the inevitable form that results from the lengthy use of a thing-shall we say, a core of awareness. Design is refining that "normal" core existence bit by bit so that it fits in with our lives today. Then this exceeds normal and becomes Super Normal. Those things that never change can also be called Super Normal. I think that Super Normal indicates our "realization" of what is good in "normal."</p>
+                <p><span class="speaker">Jasper Morrison:</span> I don't mind the definition to "make nicer things." If design achieved this occasionally, it would be fine! I agree Super Normal isn't a theory, it's more of a "noticing". Super Normal has been around for a long time, probably since the first pots were made. It's an aspect of how we live with and relate to objects rather than a system for designing better things, although I think there's a lot to be learnt from that.</p>
+                <p>Objects become Super Normal through use rather than design, although their design is a key factor. You might not know something was Super Normal simply by looking at it, nor would you know it by using it once, It's more of a long-term discovery of the quality of an object, which goes beyond the initial visual judgment and basic assessment that we make of things when we first notice them. Super Normal may belong more to everyday life than it does to design.</p>
+            </div>
+        </details>
+
+        <details class="qa-item">
+            <summary>What could be a possible definition of Super Normal?</summary>
+            <div class="qa-answer">
+                <p><span class="speaker">Naoto Fukasawa:</span> it refers to something that already exists, something so ordinary or normal that everybody points to it and says, "That's really normal!" It can also mean something that has been newly designed, which people look at with the expectation of being blown away by its newness or by something special about it.</p>
+                <p>Instead they say, "Huh?! That's just so... normall" So it's something that packs a surprise at odds with our expectations.</p>
+                <p><span class="speaker">Jasper Morrison:</span> An even more basic definition could be something that's good to have around, that you use in a completely satisfactory way without having to think about its shape or decipher any hidden message or trickiness. If you went into a shop looking for a dining plate, it would be the most plate-like plate you could find. Even more plate-like than you could imagine a plate to be.</p>
+                <p>What's good about a more than plate-like plate is that it will do its job without messing up the atmosphere in the way that designer tableware might do. The same can be applied to almost any category of object.</p>
+            </div>
+        </details>
+
+        <details class="qa-item">
+            <summary>What place does Super Normal occupy in your work as designers?</summary>
+            <div class="qa-answer">
+                <p><span class="speaker">Naoto Fukasawa:</span> When I start a project these days, I tend to check what is normal or archetypal in the category, because I believe that Super Normal is about extracting the essence of this normality.</p>
+                <p>Once the archetypal character of the category is discovered. I refine it to suit today's lifestyle. This may only involve very slight changes, but I think that when the essence of normal is found and refined, the result is naturally something Super Normal.</p>
+                <p>I try to avoid the pressures of trying to create something new and better, ignoring existing perfections in a category.</p>
+                <p><span class="speaker">Jasper Morrison:</span> Once you notice something Super Normal it becomes a bit of an obsession, it occupies a lot of time. I find myself asking if a thing seems Super Normal before buying it, or comparing two models of a product to decide which might be more Super Normal, or sitting in restaurants turning plates upside down.</p>
+                <p>These moments have always been an important part of how I design and at the start of a project I've noticed myself asking whether it's appropriate to aim for a Super Normal result, but I think an awareness of Super Normal can only be good for one's design. I think most designers get inspiration from looking at life, and this is no different; it's just concentrated on normality.</p>
+            </div>
+        </details>
+
+        <details class="qa-item">
+            <summary>Super Normal seems to suggest that objects may be endowed with their own soul, rather than being inanimate objects. This perspective is probably closer to Japanese culture and its world populated by a divine being, connected to the presences of the Kami. What do you think?</summary>
+            <div class="qa-answer">
+                <p><span class="speaker">Naoto Fukasawa:</span> There is a kind of beauty, a purity to brand-new objects that have been untouched by human hands. In the Shinto faith, there is a philosophy that links the beauty of such untouched objects to God and that searches for a beauty removed from those things tainted by the real world in which we live, this being the world of God.</p>
+                <p>Another idea is that an implement that has been newly created and not yet used has no soul. in contrast, something used by many people (this doesn't mean just one item; it means a number of the same implements used by many has a soul to it. Through many people using it, an object is substantiated and attains a brilliance: the weight of the soul within this object shows its worth. Wabi-sabris a beauty that arses after useful beauty has been mastered.</p>
+            </div>
+        </details>
+    </main>
 </body>
 </html>

@@ -7,6 +7,9 @@
     <style>
         body {
             margin: 0;
+            font-family: courier, monospace;
+            color: #353535;
+            background: #ffffff;
         }
 
         header {
@@ -56,6 +59,152 @@
             color: #0083da;
         }
 
+        .hero {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            min-height: 360px;
+            border-bottom: 2px solid #c3c3c3;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 54vh;
+            min-height: 360px;
+            max-height: 620px;
+            object-fit: cover;
+            filter: blur(1.7px);
+            transform: scale(1.02);
+            display: block;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 42px;
+            left: 36px;
+            right: 24px;
+            z-index: 2;
+        }
+
+        .hero-overlay h2 {
+            margin: 0;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: clamp(28px, 4.2vw, 54px);
+            font-weight: 800;
+            line-height: 1.06;
+            color: #000000;
+            max-width: 720px;
+            text-shadow: 2px 3px 5px white;
+        }
+
+        .intro-box {
+            position: relative;
+            margin: -46px auto 40px;
+            max-width: 860px;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid #bcbcbc;
+            padding: 22px 24px;
+            box-sizing: border-box;
+            z-index: 3;
+        }
+
+        .intro-box p {
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .about-content {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 24px 64px;
+            box-sizing: border-box;
+        }
+
+        .about-section {
+            margin-bottom: 48px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid #d4d4d4;
+        }
+
+        .about-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .about-section h3 {
+            margin: 0 0 14px 0;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: #1b1b1b;
+        }
+
+        .about-section p {
+            margin: 0 0 14px 0;
+            font-size: 16px;
+            line-height: 1.75;
+        }
+
+        .about-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .about-section em {
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 14px 16px;
+            }
+
+            nav {
+                gap: 10px;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .hero {
+                min-height: 300px;
+            }
+
+            .hero-image {
+                height: 44vh;
+                min-height: 300px;
+            }
+
+            .hero-overlay {
+                top: 28px;
+                left: 18px;
+                right: 18px;
+            }
+
+            .intro-box {
+                margin: -26px 16px 34px;
+                padding: 18px 16px;
+            }
+
+            .intro-box p,
+            .about-section p {
+                font-size: 15px;
+                line-height: 1.68;
+            }
+
+            .about-content {
+                padding: 0 16px 56px;
+            }
+
+            .about-section h3 {
+                font-size: 23px;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -71,6 +220,52 @@
         </nav>
     </header>
 
-    
+    <section class="hero" aria-label="About hero image">
+        <img class="hero-image" src="../variation-1/supernormal-header.png" alt="Super Normal objects overview">
+        <div class="hero-overlay">
+            <h2>What is a Super Normal object?</h2>
+        </div>
+    </section>
+
+    <div class="intro-box">
+        <p>
+            A Super Normal object is something so ordinary and well-resolved that we stop noticing it as "designed" at all. It quietly performs, feels natural in the hand, and becomes part of daily life through clarity, usefulness, and familiarity.
+        </p>
+    </div>
+
+    <main class="about-content">
+        <section class="about-section">
+            <h3>About This Project</h3>
+            <p>
+                This site explores the idea of Super Normal through a visual archive of everyday tools, household forms, and industrial products. Instead of celebrating novelty, the project focuses on objects that have endured because their proportions, materials, and use patterns are already "right enough." The drawings, index pages, and photo studies are meant to slow down our attention and make these familiar forms visible again.
+            </p>
+            <p>
+                The project is built around close looking: comparing silhouettes, surface details, and handling cues that make an object understandable at a glance. By collecting these examples in one place, the site asks how good design can be humble, stable, and quietly memorable.
+            </p>
+        </section>
+
+        <section class="about-section">
+            <h3>About The Book</h3>
+            <p>
+                <em>Super Normal: Sensations of the Ordinary</em> by Jasper Morrison and Naoto Fukasawa argues that many of the best objects are not dramatic statements, but things that disappear into life through consistent, thoughtful function. The book highlights objects across furniture, kitchenware, tools, and public equipment that feel inevitable rather than expressive.
+            </p>
+            <p>
+                Its central idea is that normality is not a lack of design. It is often the result of countless micro-decisions that reduce friction between people and objects. Over time, these pieces earn trust and become standards, not because they are loud, but because they are deeply usable.
+            </p>
+        </section>
+
+        <section class="about-section">
+            <h3>Why It Matters</h3>
+            <p>
+                In a culture that often rewards constant visual novelty, Super Normal reminds us that design quality can be measured by durability, legibility, and care for everyday routines. A cup, stool, basket, or brush can carry intelligence without demanding attention.
+            </p>
+            <p>
+                Looking at these objects as a collection also reveals shared design values across regions and decades: balanced geometry, honest materials, and forms that support repeated use. This perspective shifts design from trend to long-term relationship.
+            </p>
+        </section>
+
+        
+    </main>
+
 </body>
 </html>
