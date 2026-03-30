@@ -33,10 +33,6 @@
             color: #000000;
         }
 
-        .center-nav h1 a:hover {
-            color: #e31313;
-        }
-
         nav {
             display: flex;
             justify-content: center;
@@ -53,7 +49,19 @@
             padding: 4px 6px;
         }
 
-        nav a:hover {
+        nav a[href$="about.html"]:hover {
+            color: #e31313;
+        }
+
+        nav a[href$="index.html"]:hover {
+            color: #daab00;
+        }
+
+        nav a[href$="photos.html"]:hover {
+            color: #198d1f;
+        }
+
+        nav a[href$="interview.html"]:hover {
             color: #0083da;
         }
 
@@ -65,7 +73,7 @@
             padding: 40px 28px 60px;
         }
 
-        @media (min-width: 701px) {
+        @media (min-width: 700px) {
             .center-nav {
                 pointer-events: none;
             }
@@ -99,10 +107,15 @@
 
         @media (max-width: 700px) {
             .center-nav {
-                background: rgba(255, 255, 255, 0.85);
-                backdrop-filter: blur(8px);
-                border-radius: 4px;
-                padding: 12px 10px;
+                background: rgba(255, 255, 255, 0.9);
+                border-radius: 2px;
+                padding: 12px 16px;
+            }
+
+            .center-nav h2 {
+                margin: 8px 0 0;
+                font-size: clamp(16px, 5vw, 20px);
+                padding-bottom: 12px;
             }
 
             .center-nav h1 {
@@ -112,20 +125,31 @@
             nav {
                 flex-direction: column;
                 align-items: center;
-                gap: 8px;
+                gap: 20px;
             }
 
             nav a {
-                font-size: 13px;
-                letter-spacing: 0.08em;
+                font-size: 24px;
+                letter-spacing: 0.06em;
                 font-weight: 700;
-                padding: 7px 14px;
-                border: 1px solid #a9a9a9;
-                background: rgba(255, 255, 255, 0.92);
+                padding: 0;
+                color: #353535;
             }
 
-            nav a:hover {
-                border-color: #0083da;
+            nav a[href$="about.html"]:hover {
+                color: #e31313;
+            }
+
+            nav a[href$="index.html"]:hover {
+                color: #daab00;
+            }
+
+            nav a[href$="photos.html"]:hover {
+                color: #198d1f;
+            }
+
+            nav a[href$="interview.html"]:hover {
+                color: #0083da;
             }
         }
 
@@ -160,12 +184,44 @@
             transform: scale(1.06) rotate(0deg);
             z-index: 2;
         }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 24px 24px;
+            font-family: Helvetica, Arial, sans-serif;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #0083da;
+        }
+
+        footer a:hover {
+            color: #e31313;
+        }
+
+        @media (max-width: 768px) {
+            footer {
+                position: static;
+                bottom: auto;
+            }
+        }
     </style>
     
 </head>
 <body>
     <div class="center-nav">
-        <h1><a href="home2.html">Super Normal</a></h1>
+        <h1>Super Normal</h1>
         <h2> Sensations of the Ordinary</h2>
         <nav>
             <a class="page" href="about.html">ABOUT</a>
@@ -177,161 +233,164 @@
 
     <div class="collection-grid">
             <div class="object-box">
-                <a href="index-expanded.html#object-1"><img src="../drawings/1.png" alt="Object 1"></a>
+                <a href="index.html#object-1"><img src="../drawings/1.png" alt="Object 1"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-2"><img src="../drawings/2.png" alt="Object 2"></a>
+                <a href="index.html#object-2"><img src="../drawings/2.png" alt="Object 2"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-3"><img src="../drawings/3.png" alt="Object 3"></a>
+                <a href="index.html#object-3"><img src="../drawings/3.png" alt="Object 3"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-4"><img src="../drawings/4.png" alt="Object 4"></a>
+                <a href="index.html#object-4"><img src="../drawings/4.png" alt="Object 4"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-5"><img src="../drawings/5.png" alt="Object 5"></a>
+                <a href="index.html#object-5"><img src="../drawings/5.png" alt="Object 5"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-6"><img src="../drawings/6.png" alt="Object 6"></a>
+                <a href="index.html#object-6"><img src="../drawings/6.png" alt="Object 6"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-7"><img src="../drawings/7.png" alt="Object 7"></a>
+                <a href="index.html#object-7"><img src="../drawings/7.png" alt="Object 7"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-8"><img src="../drawings/8.png" alt="Object 8"></a>
+                <a href="index.html#object-8"><img src="../drawings/8.png" alt="Object 8"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-9"><img src="../drawings/9.png" alt="Object 9"></a>
+                <a href="index.html#object-9"><img src="../drawings/9.png" alt="Object 9"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-10"><img src="../drawings/10.png" alt="Object 10"></a>
+                <a href="index.html#object-10"><img src="../drawings/10.png" alt="Object 10"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-11"><img src="../drawings/11.png" alt="Object 11"></a>
+                <a href="index.html#object-11"><img src="../drawings/11.png" alt="Object 11"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-12"><img src="../drawings/12.png" alt="Object 12"></a>            </div>
+                <a href="index.html#object-12"><img src="../drawings/12.png" alt="Object 12"></a>            </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-13"><img src="../drawings/13.png" alt="Object 13"></a>
+                <a href="index.html#object-13"><img src="../drawings/13.png" alt="Object 13"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-14"><img src="../drawings/14.png" alt="Object 14"></a>
+                <a href="index.html#object-14"><img src="../drawings/14.png" alt="Object 14"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-15"><img src="../drawings/15.png" alt="Object 15"></a>
+                <a href="index.html#object-15"><img src="../drawings/15.png" alt="Object 15"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-16"><img src="../drawings/16.png" alt="Object 16"></a>
+                <a href="index.html#object-16"><img src="../drawings/16.png" alt="Object 16"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-17"><img src="../drawings/17.png" alt="Object 17"></a>
+                <a href="index.html#object-17"><img src="../drawings/17.png" alt="Object 17"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-18"><img src="../drawings/18.png" alt="Object 18"></a>
+                <a href="index.html#object-18"><img src="../drawings/18.png" alt="Object 18"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-19"><img src="../drawings/19.png" alt="Object 19"></a>
+                <a href="index.html#object-19"><img src="../drawings/19.png" alt="Object 19"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-20"><img src="../drawings/20.png" alt="Object 20"></a>
+                <a href="index.html#object-20"><img src="../drawings/20.png" alt="Object 20"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-21"><img src="../drawings/21.png" alt="Object 21"></a>
+                <a href="index.html#object-21"><img src="../drawings/21.png" alt="Object 21"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-22"><img src="../drawings/22.png" alt="Object 22"></a>
+                <a href="index.html#object-22"><img src="../drawings/22.png" alt="Object 22"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-23"><img src="../drawings/23.png" alt="Object 23"></a>
+                <a href="index.html#object-23"><img src="../drawings/23.png" alt="Object 23"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-24"><img src="../drawings/24.png" alt="Object 24"></a>
+                <a href="index.html#object-24"><img src="../drawings/24.png" alt="Object 24"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-25"><img src="../drawings/25.png" alt="Object 25"></a>
+                <a href="index.html#object-25"><img src="../drawings/25.png" alt="Object 25"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-26"><img src="../drawings/26.png" alt="Object 26"></a>
+                <a href="index.html#object-26"><img src="../drawings/26.png" alt="Object 26"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-27"><img src="../drawings/27.png" alt="Object 27"></a>
+                <a href="index.html#object-27"><img src="../drawings/27.png" alt="Object 27"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-28"><img src="../drawings/28.png" alt="Object 28"></a>
+                <a href="index.html#object-28"><img src="../drawings/28.png" alt="Object 28"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-29"><img src="../drawings/29.png" alt="Object 29"></a>
+                <a href="index.html#object-29"><img src="../drawings/29.png" alt="Object 29"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-30"><img src="../drawings/30.png" alt="Object 30"></a>
+                <a href="index.html#object-30"><img src="../drawings/30.png" alt="Object 30"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-31"><img src="../drawings/31.png" alt="Object 31"></a>
+                <a href="index.html#object-31"><img src="../drawings/31.png" alt="Object 31"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-32"><img src="../drawings/32.png" alt="Object 32"></a>
+                <a href="index.html#object-32"><img src="../drawings/32.png" alt="Object 32"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-33"><img src="../drawings/33.png" alt="Object 33"></a>
+                <a href="index.html#object-33"><img src="../drawings/33.png" alt="Object 33"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-34"><img src="../drawings/34.png" alt="Object 34"></a>
+                <a href="index.html#object-34"><img src="../drawings/34.png" alt="Object 34"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-35"><img src="../drawings/35.png" alt="Object 35"></a>
+                <a href="index.html#object-35"><img src="../drawings/35.png" alt="Object 35"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-36"><img src="../drawings/36.png" alt="Object 36"></a>
+                <a href="index.html#object-36"><img src="../drawings/36.png" alt="Object 36"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-37"><img src="../drawings/37.png" alt="Object 37"></a>
+                <a href="index.html#object-37"><img src="../drawings/37.png" alt="Object 37"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-38"><img src="../drawings/38.png" alt="Object 38"></a>
+                <a href="index.html#object-38"><img src="../drawings/38.png" alt="Object 38"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-39"><img src="../drawings/39.png" alt="Object 39"></a>
+                <a href="index.html#object-39"><img src="../drawings/39.png" alt="Object 39"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-40"><img src="../drawings/40.png" alt="Object 40"></a>
+                <a href="index.html#object-40"><img src="../drawings/40.png" alt="Object 40"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-41"><img src="../drawings/41.png" alt="Object 41"></a>
+                <a href="index.html#object-41"><img src="../drawings/41.png" alt="Object 41"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-42"><img src="../drawings/42.png" alt="Object 42"></a>
+                <a href="index.html#object-42"><img src="../drawings/42.png" alt="Object 42"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-43"><img src="../drawings/43.png" alt="Object 43"></a>
+                <a href="index.html#object-43"><img src="../drawings/43.png" alt="Object 43"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-44"><img src="../drawings/44.png" alt="Object 44"></a>
+                <a href="index.html#object-44"><img src="../drawings/44.png" alt="Object 44"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-45"><img src="../drawings/45.png" alt="Object 45"></a>
+                <a href="index.html#object-45"><img src="../drawings/45.png" alt="Object 45"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-46"><img src="../drawings/46.png" alt="Object 46"></a>
+                <a href="index.html#object-46"><img src="../drawings/46.png" alt="Object 46"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-47"><img src="../drawings/47.png" alt="Object 47"></a>
+                <a href="index.html#object-47"><img src="../drawings/47.png" alt="Object 47"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-48"><img src="../drawings/48.png" alt="Object 48"></a>
+                <a href="index.html#object-48"><img src="../drawings/48.png" alt="Object 48"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-49"><img src="../drawings/49.png" alt="Object 49"></a>
+                <a href="index.html#object-49"><img src="../drawings/49.png" alt="Object 49"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-50"><img src="../drawings/50.png" alt="Object 50"></a>
+                <a href="index.html#object-50"><img src="../drawings/50.png" alt="Object 50"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-51"><img src="../drawings/51.png" alt="Object 51"></a>
+                <a href="index.html#object-51"><img src="../drawings/51.png" alt="Object 51"></a>
             </div>
             <div class="object-box">
-                <a href="index-expanded.html#object-52"><img src="../drawings/52.png" alt="Object 52"></a>
+                <a href="index.html#object-52"><img src="../drawings/52.png" alt="Object 52"></a>
             </div>
     </div>
 
+    <footer>
+        <p>© 2026 Super Normal  •  Curated by Jasper Morrison & Naoto Fukasawa</p>
+    </footer>
 </body>
 </html>

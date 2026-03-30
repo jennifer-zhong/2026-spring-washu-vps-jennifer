@@ -7,13 +7,13 @@
     <style>
         body {
             margin: 0;
-            padding: 0px 0px;
+            padding: 0;
         }
 
         header {
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 300;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -33,6 +33,10 @@
             color: #000;
         }
 
+        .header-title h1 a:hover {
+            color: #daab00;
+        }
+
         nav {
             display: flex;
             gap: 16px;
@@ -45,21 +49,98 @@
             font-weight: 600;
         }
 
-        nav a:hover {
+        nav a[href$="about.html"]:hover {
+            color: #e31313;
+        }
+
+        nav a[href$="index.html"]:hover {
+            color: #daab00;
+        }
+
+        nav a[href$="photos.html"]:hover {
+            color: #198d1f;
+        }
+
+        nav a[href$="interview.html"]:hover {
             color: #0083da;
         }
 
-        .header-title h1 a:hover {
+        body.menu-open {
+            overflow: hidden;
+        }
+
+        .menu-toggle {
+            display: none;
+            position: relative;
+            z-index: 220;
+            border: 1px solid #a9a9a9;
+            background: #fff;
+            color: #353535;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1;
+            width: 36px;
+            height: 36px;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .mobile-menu-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 200;
+            background: rgba(255, 255, 255, 0.98);
+            align-items: flex-start;
+            justify-content: center;
+            padding-top: 88px;
+            box-sizing: border-box;
+        }
+
+        .mobile-menu-overlay.open {
+            display: flex;
+        }
+
+        .mobile-menu-nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .mobile-menu-nav a {
+            text-decoration: none;
+            color: #353535;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+        }
+
+        .mobile-menu-nav a[href$="about.html"]:hover {
             color: #e31313;
+        }
+
+        .mobile-menu-nav a[href$="index.html"]:hover {
+            color: #daab00;
+        }
+
+        .mobile-menu-nav a[href$="photos.html"]:hover {
+            color: #198d1f;
+        }
+
+        .mobile-menu-nav a[href$="interview.html"]:hover {
+            color: #0083da;
         }
 
         .content {
             max-width: 800px;
             margin: 0 auto;
-            padding: 48px 32px;
+            padding: 48px 32px 20px;
             font-family: courier, monospace;
         }
-
 
         .page-toggle-wrap {
             position: fixed;
@@ -90,18 +171,26 @@
             margin-bottom: 12px;
         }
 
-        .object-item a {
-            text-decoration: none;
-            color: #353535;
+        .object-details {
             display: block;
+        }
+
+        .object-details summary {
+            list-style: none;
+            cursor: pointer;
+            color: #353535;
             transition: color 0.2s ease;
         }
 
-        .object-item a:hover {
-            color: #daab00;
+        .object-details summary:hover {
+            color: #808080;
         }
 
-        .object-item h2 {
+        .object-details summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .object-details[closed] summary h2 {
             display: inline;
             font-size: 16px;
             font-weight: 600;
@@ -109,24 +198,149 @@
             font-family: Helvetica, Arial, sans-serif;
         }
 
-        .object-item h3 {
+        .object-details[closed] summary h3 {
             display: inline;
             font-size: 14px;
             font-weight: 400;
             margin: 0;
         }
 
+        .object-details[open] {
+            position: relative;
+            z-index: 1;
+            margin-top: 48px;
+            margin-bottom: 64px;
+            padding-top: 48px;
+            padding-bottom: 48px;
+            border-top: 1px solid #c3c3c3;
+            border-bottom: 1px solid #c3c3c3;
+        }
+
+        .page-toggle-wrap + .object-item .object-details[open] {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+        }
+
+        .object-item:has(.object-details[open]) + .object-item:has(.object-details[open]) .object-details[open] {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+        }
+
+        .object-item:has(.object-details[open]) {
+            margin-bottom: 0;
+        }
+
+        .object-details[open] summary {
+            color: #353535;
+        }
+
+        .object-details[open] summary h2 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin: 0 0 12px 0;
+            line-height: 1.4;
+            font-family: Helvetica, Arial, sans-serif;
+            display: block;
+        }
+
+        .object-details[open] summary h2 img {
+            width: 42px;
+            height: auto;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+
+        .object-details[open] summary h3 {
+            font-size: 14px;
+            font-weight: 400;
+            color: #666;
+            margin: 0 0 24px 0;
+            line-height: 1.6;
+            display: block;
+        }
+
+        .object-expanded-content p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #353535;
+            margin: 0 0 14px 0;
+        }
+
+        .object-expanded-content p:last-child {
+            margin-bottom: 0;
+        }
+
         .current-page {
+            color: #daab00;
+        }
+
+        footer {
+            margin-top: 24px;
+            padding: 20px 24px;
+            font-family: Helvetica, Arial, sans-serif;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+
+        footer a {
+            text-decoration: none;
             color: #0083da;
+        }
+
+        footer a:hover {
+            color: #e31313;
         }
 
         @media (max-width: 768px) {
             .content {
-                padding: 32px 24px;
+                padding: 32px 24px 16px;
             }
 
-            .object-item h2,
-            .object-item h3 {
+            header nav {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: inline-flex;
+                position: fixed;
+                top: 14px;
+                right: 16px;
+            }
+
+            .object-details[closed] summary h2,
+            .object-details[closed] summary h3 {
+                font-size: 15px;
+            }
+
+            .object-details[open] {
+                margin-top: 32px;
+                margin-bottom: 48px;
+                padding-top: 32px;
+                padding-bottom: 32px;
+            }
+
+            .page-toggle-wrap + .object-item .object-details[open] {
+                margin-top: 0;
+                padding-top: 0;
+            }
+
+            .object-details[open] summary h2 {
+                font-size: 20px;
+            }
+
+            .object-details[open] summary h3 {
+                font-size: 13px;
+            }
+
+            .object-expanded-content p {
                 font-size: 15px;
             }
         }
@@ -143,11 +357,21 @@
             <a class="page" href="/project-2/variation-3/photos.html">PHOTOS</a>
             <a class="page" href="/project-2/variation-3/interview.html">INTERVIEW</a>
         </nav>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation">☰</button>
     </header>
+
+    <div class="mobile-menu-overlay" id="mobile-menu" aria-hidden="true">
+        <nav class="mobile-menu-nav">
+            <a href="/project-2/variation-3/about.html">ABOUT</a>
+            <a href="/project-2/variation-3/index.html">INDEX</a>
+            <a href="/project-2/variation-3/photos.html">PHOTOS</a>
+            <a href="/project-2/variation-3/interview.html">INTERVIEW</a>
+        </nav>
+    </div>
 
     <div class="content">
         <div class="page-toggle-wrap">
-            <a class="page-toggle" href="index-expanded.html">EXPAND</a>
+            <button class="page-toggle" type="button">EXPAND ALL</button>
         </div>
 
         <div class="object-item">
@@ -326,7 +550,7 @@
 
         <div class="object-item">
             <a href="index-expanded.html#object-26">
-                <h2>26. "Less"</h2>
+                <h2>26. Table "Less"</h2>
                 <h3>1994 &nbsp Jean Nouvel &nbsp Unifor, Italy &nbsp steel</h3>
             </a>
         </div>
@@ -514,5 +738,217 @@
         </div>
     </div>
 
+    <script>
+        (function () {
+            var toggle = document.querySelector('.page-toggle');
+            if (!toggle) return;
+
+            var objectLinks = Array.prototype.slice.call(
+                document.querySelectorAll('.object-item a[href*="#object-"]')
+            );
+
+            function setClosedState(detailsEl, isClosed) {
+                if (isClosed) {
+                    detailsEl.setAttribute('closed', '');
+                } else {
+                    detailsEl.removeAttribute('closed');
+                }
+            }
+
+            function objectNumberFromHref(href) {
+                var match = href && href.match(/#object-(\d+)/);
+                return match ? parseInt(match[1], 10) : null;
+            }
+
+            async function getExpandedDoc() {
+                if (window.__expandedDocCache) return window.__expandedDocCache;
+                var response = await fetch('index-expanded.html');
+                var html = await response.text();
+                window.__expandedDocCache = new DOMParser().parseFromString(html, 'text/html');
+                return window.__expandedDocCache;
+            }
+
+            async function loadExpandedContent(detailsEl) {
+                if (detailsEl.dataset.loaded === 'true') return;
+
+                var num = detailsEl.dataset.objectNum;
+                var fallbackHref = detailsEl.dataset.targetHref;
+                var summary = detailsEl.querySelector('summary');
+                var content = detailsEl.querySelector('.object-expanded-content');
+
+                try {
+                    var doc = await getExpandedDoc();
+                    var section = doc.querySelector('#object-' + num);
+                    if (!section) {
+                        if (fallbackHref) window.location.href = fallbackHref;
+                        return;
+                    }
+
+                    var h2 = section.querySelector('h2');
+                    var h3 = section.querySelector('h3');
+                    var paragraphs = Array.prototype.slice.call(section.querySelectorAll('p'));
+
+                    summary.innerHTML = '';
+                    if (h2) summary.insertAdjacentHTML('beforeend', h2.outerHTML);
+                    if (h3) summary.insertAdjacentHTML('beforeend', h3.outerHTML);
+                    content.innerHTML = paragraphs.map(function (p) {
+                        return p.outerHTML;
+                    }).join('');
+
+                    detailsEl.dataset.loaded = 'true';
+                } catch (error) {
+                    if (fallbackHref) window.location.href = fallbackHref;
+                }
+            }
+
+            function restoreClosedSummary(detailsEl) {
+                var summary = detailsEl.querySelector('summary');
+                var content = detailsEl.querySelector('.object-expanded-content');
+                if (!summary || !content) return;
+
+                summary.innerHTML = detailsEl.dataset.closedSummary || '';
+                content.innerHTML = '';
+                detailsEl.dataset.loaded = 'false';
+            }
+
+            objectLinks.forEach(function (link) {
+                var num = objectNumberFromHref(link.getAttribute('href'));
+                if (!num) return;
+                var item = link.closest('.object-item');
+                if (item) {
+                    item.id = 'object-' + num;
+                    item.style.scrollMarginTop = '96px';
+
+                    var detailsEl = document.createElement('details');
+                    detailsEl.className = 'object-details';
+                    detailsEl.dataset.objectNum = String(num);
+                    detailsEl.dataset.targetHref = link.getAttribute('href');
+                    detailsEl.dataset.closedSummary = link.innerHTML;
+                    detailsEl.dataset.loaded = 'false';
+                    setClosedState(detailsEl, true);
+
+                    var summary = document.createElement('summary');
+                    summary.innerHTML = link.innerHTML;
+                    detailsEl.appendChild(summary);
+
+                    var content = document.createElement('div');
+                    content.className = 'object-expanded-content';
+                    detailsEl.appendChild(content);
+
+                    detailsEl.addEventListener('toggle', function () {
+                        if (detailsEl.open) {
+                            setClosedState(detailsEl, false);
+                            loadExpandedContent(detailsEl);
+                        } else {
+                            setClosedState(detailsEl, true);
+                            restoreClosedSummary(detailsEl);
+                        }
+                        updateToggleLabel();
+                    });
+
+                    item.innerHTML = '';
+                    item.appendChild(detailsEl);
+                }
+            });
+
+            function getAllDetails() {
+                return Array.prototype.slice.call(document.querySelectorAll('.object-details'));
+            }
+
+            function areAllDetailsOpen() {
+                var detailsList = getAllDetails();
+                if (!detailsList.length) return false;
+                return detailsList.every(function (detailsEl) {
+                    return detailsEl.open;
+                });
+            }
+
+            function updateToggleLabel() {
+                toggle.textContent = areAllDetailsOpen() ? 'COLLAPSE ALL' : 'EXPAND ALL';
+            }
+
+            async function expandAllDetails() {
+                var detailsList = getAllDetails();
+                await Promise.all(detailsList.map(function (detailsEl) {
+                    detailsEl.open = true;
+                    setClosedState(detailsEl, false);
+                    return loadExpandedContent(detailsEl);
+                }));
+            }
+
+            function collapseAllDetails() {
+                var detailsList = getAllDetails();
+                detailsList.forEach(function (detailsEl) {
+                    detailsEl.open = false;
+                    setClosedState(detailsEl, true);
+                    restoreClosedSummary(detailsEl);
+                });
+            }
+
+            toggle.addEventListener('click', async function (event) {
+                event.preventDefault();
+                if (areAllDetailsOpen()) {
+                    collapseAllDetails();
+                    updateToggleLabel();
+                    return;
+                }
+
+                await expandAllDetails();
+                updateToggleLabel();
+            });
+
+            if (window.location.hash) {
+                var target = document.querySelector(window.location.hash);
+                if (target) {
+                    var detailsTarget = target.querySelector('.object-details');
+                    if (detailsTarget) {
+                        detailsTarget.open = true;
+                    }
+                    requestAnimationFrame(function () {
+                        target.scrollIntoView({ block: 'start' });
+                    });
+                }
+            }
+
+            updateToggleLabel();
+        })();
+    </script>
+
+    <script>
+        (function () {
+            var menuButton = document.querySelector('.menu-toggle');
+            var menuOverlay = document.getElementById('mobile-menu');
+            if (!menuButton || !menuOverlay) return;
+
+            function setMenuOpen(isOpen) {
+                document.body.classList.toggle('menu-open', isOpen);
+                menuOverlay.classList.toggle('open', isOpen);
+                menuButton.textContent = isOpen ? 'X' : '☰';
+                menuButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                menuButton.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+                menuOverlay.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+            }
+
+            menuButton.addEventListener('click', function () {
+                setMenuOpen(!menuOverlay.classList.contains('open'));
+            });
+
+            menuOverlay.addEventListener('click', function (event) {
+                if (event.target === menuOverlay) {
+                    setMenuOpen(false);
+                }
+            });
+
+            menuOverlay.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    setMenuOpen(false);
+                });
+            });
+        })();
+    </script>
+
+    <footer>
+        <p>© 2026 Super Normal  •  Curated by Jasper Morrison & Naoto Fukasawa</p>
+    </footer>
 </body>
 </html>
