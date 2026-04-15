@@ -6,7 +6,7 @@
     <title>Jennifer's Class Website, Spring 2026 at WashU</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=DM+Serif+Display:ital@0;1&family=Pacifico&family=Playfair+Display:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
     <style>
      body {
@@ -21,7 +21,6 @@
     h1 {
         font-size: 48px;
         color: rgb(53, 148, 192);
-        font-family: "DM Serif Display", serif;
         font-weight: 400;
         font-style: normal;
         text-align: center;
@@ -106,7 +105,7 @@
 </head>
 <body>
 
-    <h1><b>Jennifer's Class Website</b></h1>
+    <h1 id="title"><b>Jennifer's Class Website</b></h1>
 
     <div class="subtitle">
     Visual Principles for Screen, Spring 2026 at WashU <br>
@@ -146,11 +145,9 @@
 
     <div class="container">
     <a class="item" href="writing1.html">Writing Exercise #1</a>
-     <a class="item" href="writing2.html">Writing Exercise #2</a>
-
-    <div class="unlinked-item">
-    Writing Exercise #3<br>
-    </div>
+    <a class="item" href="writing2.html">Writing Exercise #2</a>
+    <a class="item" href="writing3.html">Writing Exercise #3</a>
+    
     <div class="unlinked-item">
     Writing Exercise #4<br>
     </div>
@@ -171,8 +168,26 @@
 
     <a class="item" href="interview.html">Interview</a>
 
-
     </div>
     <br><br>
+
+    <script>
+        const fonts = [
+        '"Roboto", sans-serif',
+        '"Pacifico", cursive',
+        '"Playfair Display", serif',
+        '"Courier Prime", monospace',
+        '"DM Serif Display", serif',
+        '"Times New Roman", serif',
+        '"Arial", sans-serif',
+        '"Georgia", serif',
+        '"Verdana", sans-serif',
+        '"Trebuchet MS", sans-serif',
+        ];
+
+        const randomFont = fonts[Math.floor(Math.random() * fonts.length)];
+
+        document.getElementById("title").style.fontFamily = randomFont;
+    </script>
 </body>
 </html>
